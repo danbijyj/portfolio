@@ -16,8 +16,8 @@ export const worksData = [
         },
         tags: ['Figma', 'HTML', 'CSS', 'Javascript', 'Vercel'],
         links: {
-            github: 'https://github.com/danbijyj/Welcome.git',
-            site: 'https://danbijyj.github.io/project3/',
+            github: 'https://github.com/danbijyj/welcome.git',
+            site: 'https://welcome-two-blue.vercel.app/',
         },
         responsive: false,
     },
@@ -46,8 +46,8 @@ export const worksData = [
             'Vercel',
         ],
         links: {
-            github: '#',
-            site: '#',
+            github: 'https://github.com/danbijyj/seoul',
+            site: 'https://seoul-chi.vercel.app/',
         },
         responsive: true,
     },
@@ -129,8 +129,8 @@ export const worksData = [
         },
         tags: ['Figma', 'React', 'SCSS', 'GSAP', 'Vercel'],
         links: {
-            github: '#',
-            site: '#',
+            github: 'https://github.com/danbijyj/portfolio',
+            site: 'https://jyjportfolio.vercel.app/',
         },
         responsive: true,
     },
