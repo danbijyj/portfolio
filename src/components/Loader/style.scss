@@ -1,0 +1,80 @@
+@use '../../scss/global.scss' as *;
+
+.loader {
+    --partials: 3;
+    --section-height: calc(100vh / var(--partials));
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $white;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: none;
+    &.ready {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+    .loader_clip {
+        position: absolute;
+        width: 100vw;
+        height: var(--section-height);
+        overflow: hidden;
+        z-index: 1000;
+        &.clip_top {
+            top: 0;
+            background-color: $black;
+            .marquee {
+                left: 65vw;
+            }
+        }
+        &.clip_bottom {
+            bottom: 0;
+            background-color: $black;
+            .marquee {
+                // left: 50vw;
+                left: 110vw;
+            }
+        }
+        .marquee {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            white-space: nowrap;
+            @include font-style($size: 10vw, $weight: $fw-100, $color: $white);
+            .marquee_container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .clip_center {
+        position: absolute;
+        top: var(--section-height);
+        width: 100vw;
+        height: var(--section-height);
+        overflow: hidden;
+        z-index: 100;
+        .marquee {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            white-space: nowrap;
+            @include font-style($size: 10vw, $weight: $fw-900, $color: $blue);
+            .marquee_container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

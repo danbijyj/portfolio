@@ -1,0 +1,140 @@
+@use '../../../scss/global.scss' as *;
+
+.contact {
+    min-height: 100vh;
+    position: relative;
+    .contact_marquee {
+        position: relative;
+        background-color: $blue;
+        @include font-style($size: $fz-32, $weight: $fw-800, $color: $white);
+        overflow: hidden;
+        .marquee_inner {
+            display: flex;
+            white-space: nowrap;
+            width: max-content;
+            will-change: transform;
+        }
+        .marquee_part {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            padding: 31px 10px;
+        }
+    }
+    .inner {
+        text-align: center;
+        h2 {
+            margin-top: 130px;
+        }
+        .getintouch {
+            margin-top: 80px;
+            background-color: $green;
+            display: inline-block;
+            @include font-style(
+                $size: $fz-24,
+                $weight: $fw-500,
+                $color: $white
+            );
+            box-shadow: 3px 3px 0 $black;
+            padding: 5px 15px;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px auto 0;
+            width: 810px;
+            border-top: 1px solid $black;
+            padding-top: 40px;
+            li {
+                @include flex-center;
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .copy {
+            position: absolute;
+            left: 50%;
+            bottom: 50px;
+            transform: translateX(-50%);
+            .thanks {
+                @include font-style($size: $fz-52, $weight: $fw-600);
+                text-shadow: 2px 2px 0 $green;
+            }
+            .copyright {
+                font-size: 14px;
+                margin-top: 15px;
+            }
+        }
+        .left {
+            position: absolute;
+            left: 40px;
+            top: 470px;
+            z-index: -10;
+        }
+        .right {
+            position: absolute;
+            right: 80px;
+            top: 220px;
+            z-index: -10;
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .contact {
+        width: $breakpoint-tablet;
+        max-width: 100vw;
+        .contact_marquee {
+            font-size: 22px;
+        }
+        .inner {
+            ul {
+                flex-direction: column;
+                gap: 30px;
+                width: 100%;
+                margin-top: 60px;
+            }
+            .copy {
+                .thanks {
+                    @include font-style($size: $fz-32, $weight: $fw-600);
+                }
+            }
+            .left {
+                scale: 0.5;
+                left: -60px;
+                top: 570px;
+            }
+            .right {
+                scale: 0.5;
+                right: 0px;
+                top: 80px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-mobile) {
+    .contact {
+        width: $breakpoint-mobile;
+        max-width: 100vw;
+        .inner {
+            h2 {
+                margin-top: 80px;
+            }
+            .copy {
+                .thanks {
+                    font-size: 28px;
+                }
+            }
+            .left {
+                scale: 0.3;
+                left: -110px;
+                top: 480px;
+            }
+            .right {
+                scale: 0.3;
+                right: -90px;
+                top: 10px;
+            }
+        }
+    }
+}

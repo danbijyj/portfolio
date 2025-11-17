@@ -1,0 +1,46 @@
+@use '../../scss/global.scss' as *;
+
+.top {
+    z-index: 1000;
+    position: fixed;
+    right: 30px;
+    bottom: 70px;
+    font-size: 48px;
+    color: $grey7;
+    border: 1px solid $grey7;
+    border-radius: 24px;
+    padding: 12px;
+    background-color: rgba($white, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s, background-color 0.3s;
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &:hover {
+        color: $blue;
+        border: 1px solid $blue;
+        background-color: rgba($white, 0.6);
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .top {
+        font-size: 40px;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+    }
+}
+@media (max-width: $breakpoint-mobile) {
+    .top {
+        right: 15px;
+        bottom: 60px;
+        font-size: 32px;
+        padding: 8px;
+    }
+}
