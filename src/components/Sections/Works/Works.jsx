@@ -18,7 +18,7 @@ const Works = () => {
         { label: 'All', filter: 'all' },
         { label: 'Personal', filter: 'personal' },
         { label: 'Team', filter: 'team' },
-        { label: 'Server', filter: 'server' },
+        { label: 'Backend', filter: 'backend' },
     ];
 
     const getFontSize = (isActive = false) => {
