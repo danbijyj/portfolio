@@ -40,8 +40,8 @@
         overflow: visible;
         .item {
             position: absolute;
-            width: clamp(200px, 20vw, 280px);
-            height: calc(clamp(200px, 20vw, 280px) * 0.785);
+            width: 280px;
+            height: 220px;
             will-change: transform, opacity;
             transform: translate3d(0, 0, 0);
             img {
@@ -71,6 +71,12 @@
     .worksview {
         width: 100%;
         max-width: 100vw;
+        .gallery {
+            .item {
+                width: 200px;
+                height: 157px;
+            }
+        }
     }
 }
 @media (max-width: $breakpoint-mobile) {
@@ -83,6 +89,12 @@
             }
             button {
                 padding: 12px 30px;
+            }
+        }
+        .gallery {
+            .item {
+                width: 120px;
+                height: 94px;
             }
         }
     }
