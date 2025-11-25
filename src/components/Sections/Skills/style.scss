@@ -243,8 +243,8 @@
 
 @media (max-width: $breakpoint-mobile) {
     .skills {
-        min-height: 100vh;
-        height: 100vh;
+        max-width: 100vw;
+        min-height: auto;
         .circle {
             width: 1200px;
             height: 1200px;
