@@ -9,14 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [isMobile, setIsMobile] = useState(false); // 화면 크기 상태
+    const [isMobile, setIsMobile] = useState(false);
     const boxRefs = useRef([]);
     const progressRef = useRef(null);
 
-    // 화면 크기 체크
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 1024);
-        handleResize(); // 초기값
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
