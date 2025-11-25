@@ -17,7 +17,7 @@ export const worksData = [
         tags: ['Figma', 'React', 'SCSS', 'GSAP', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/portfolio',
-            site: 'https://jyjportfolio.vercel.app/',
+            site: 'https://jyj-portfolio.vercel.app/',
         },
         responsive: true,
     },
@@ -39,7 +39,7 @@ export const worksData = [
         tags: ['Figma', 'React', 'SCSS', 'GSAP', 'Swiper', 'Slick', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/hera',
-            site: 'https://hera-sandy.vercel.app/',
+            site: 'https://jyj-hera.vercel.app/',
         },
         responsive: false,
     },
@@ -130,9 +130,9 @@ export const worksData = [
         ],
         links: {
             github: 'https://github.com/danbijyj/seoul',
-            site: 'https://seoul-chi.vercel.app/',
+            site: 'https://jyj-seoul.vercel.app/',
         },
-        responsive: true,
+        responsive: false,
     },
     {
         id: 6,
@@ -152,7 +152,7 @@ export const worksData = [
         tags: ['Figma', 'HTML', 'CSS', 'Javascript', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/welcome.git',
-            site: 'https://welcome-two-blue.vercel.app/',
+            site: 'https://jyj-welcome.vercel.app/',
         },
         responsive: false,
     },
@@ -174,7 +174,7 @@ export const worksData = [
         tags: ['React', 'Sass', 'GSAP', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/outback',
-            site: 'https://myoutback.vercel.app/',
+            site: 'https://jyj-outback.vercel.app/',
         },
         responsive: true,
     },
@@ -196,7 +196,7 @@ export const worksData = [
         tags: ['HTML', 'CSS', 'Javascript', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/kyungdong-clone',
-            site: 'https://kyungdong-six.vercel.app/',
+            site: 'https://jyj-kyungdong.vercel.app',
         },
         responsive: false,
     },
@@ -220,7 +220,7 @@ export const worksData = [
         tags: ['Figma', 'HTML', 'CSS', 'Javascript', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/SRT',
-            site: 'https://srt-orpin.vercel.app/',
+            site: 'https://jyj-srt.vercel.app/',
         },
         responsive: false,
     },
