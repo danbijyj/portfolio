@@ -7,7 +7,7 @@ const AboutMe = () => {
                 <h2>Ab*ut me</h2>
                 <div className="con">
                     <div className="pic">
-                        <img src="./images/me7.jpg" alt="" />
+                        <img src="./images/me.jpg" alt="" />
                         <span>*</span>
                     </div>
                     <div className="intro">
