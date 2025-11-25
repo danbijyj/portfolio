@@ -46,18 +46,6 @@ const App = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, [isLoaded]);
 
-    // useEffect(() => {
-    //     if (!isLoaded) return;
-    //     const handleResize = () => {
-    //         const nav = document.querySelector('nav');
-    //         if (nav && nav.style.top === '0px') {
-    //             nav.style.top = '0';
-    //         }
-    //     };
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    // }, [isLoaded]);
-
     return (
         <>
             {!isLoaded && <Loader onComplete={handleLoaderComplete} />}
