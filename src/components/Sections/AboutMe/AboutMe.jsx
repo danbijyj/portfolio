@@ -1,13 +1,40 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './style.scss';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const AboutMe = () => {
+    const riseRef = useRef(null);
+
+    useEffect(() => {
+        const el = riseRef.current;
+        if (!el) return;
+        gsap.fromTo(
+            el,
+            { y: 90, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 3,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '#aboutme',
+                    start: 'top 30%',
+                    toggleActions: 'restart none none reverse',
+                },
+            }
+        );
+    }, []);
+
     return (
         <section id="aboutme" className="aboutme">
             <div className="inner">
                 <h2>Ab*ut me</h2>
                 <div className="con">
-                    <div className="pic">
-                        <img src="./images/me.jpg" alt="" />
+                    <div className="pic" ref={riseRef}>
+                        <img src="/images/me.jpg" alt="" />
                         <span>*</span>
                     </div>
                     <div className="intro">
