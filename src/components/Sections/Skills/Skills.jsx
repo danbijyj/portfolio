@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './style.scss';
 import { skillsData } from '../../../assets/data/skillsData';
 import SkillBox from './SkillBox';
+import './style.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
