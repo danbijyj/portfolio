@@ -17,7 +17,7 @@ const AboutMe = () => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 3,
+                duration: 2,
                 ease: 'power3.out',
                 scrollTrigger: {
                     trigger: '#aboutme',
