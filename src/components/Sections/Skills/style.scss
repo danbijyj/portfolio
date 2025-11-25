@@ -262,7 +262,10 @@
                         .box {
                             position: relative;
                             height: auto;
-                            padding: 30px;
+                            padding: 20px;
+                            .divider {
+                                margin: 15px 0;
+                            }
                             .icon_grid {
                                 width: 100%;
                                 margin: 0 auto;
@@ -274,6 +277,11 @@
                             &.others_box {
                                 justify-content: flex-start;
                                 gap: 20px;
+                                .group {
+                                    .divider {
+                                        margin: 10px 0;
+                                    }
+                                }
                             }
                         }
                     }
