@@ -177,12 +177,13 @@
                             padding: 20px;
                             width: 100%;
                             ul {
-                                justify-content: space-between;
+                                gap: 10px;
                                 margin-top: 20px;
                                 li {
                                     border-radius: 16px;
                                     padding: 0 10px 10px;
                                     text-align: center;
+                                    font-size: 14px;
                                 }
                             }
                         }
