@@ -8,15 +8,15 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const itemPositions = [
     { top: '-5%', left: '5%' },
-    { top: '40%', left: '-5%' },
+    { top: '40%', left: '-2%' },
     { top: '25%', left: '20%' },
     { top: '60%', left: '40%' },
-    { top: '70%', left: '10%' },
-    { top: '-10%', left: '65%' },
+    { top: '70%', left: '15%' },
+    { top: '-2%', left: '55%' },
     { top: '10%', left: '85%' },
     { top: '40%', left: '60%' },
     { top: '80%', left: '70%' },
-    { top: '50%', left: '95%' },
+    { top: '50%', left: '80%' },
 ];
 
 const WorksView = () => {
