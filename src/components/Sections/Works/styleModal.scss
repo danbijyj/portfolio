@@ -169,6 +169,7 @@
     .modal_overlay {
         .modal_content {
             padding: 50px 40px;
+            height: 80%;
             .close_btn {
                 top: 20px;
                 right: 25px;
@@ -214,7 +215,7 @@
 @media (max-width: $breakpoint-mobile) {
     .modal_overlay {
         .modal_content {
-            padding: 50px 20px;
+            padding: 70px 20px;
             .content_wrap {
                 gap: 40px;
                 padding-bottom: 40px;
