@@ -107,13 +107,13 @@
                     position: absolute;
                     bottom: 0;
                     display: flex;
-                    gap: 8px;
+                    gap: 6px;
                     flex-wrap: wrap;
                     span {
                         border: 1px solid $grey;
                         border-radius: 20px;
-                        padding: 3px 16px;
-                        color: $grey7;
+                        padding: 3px 14px;
+                        @include font-style($size: $fz-14, $color: $grey7);
                         letter-spacing: 0;
                         white-space: nowrap;
                         font-family: $font-en;

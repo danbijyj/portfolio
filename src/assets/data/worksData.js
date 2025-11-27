@@ -9,12 +9,13 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: 'React 기반 개인 포트폴리오 프로젝트입니다.',
+        desc: 'React 기반의 원페이지 포트폴리오로 GSAP ScrollTrigger와 Timeline을 활용해 로딩 시퀀스, 스크롤 인터랙션, 텍스트 애니메이션 등을 구현했습니다. 전역 SCSS 구조를 설계해 일관된 스타일 시스템을 구축했으며 컴포넌트를 체계적으로 분리하여 자연스러운 화면 전환을 구성했습니다. 또한 마우스 패럴랙스 갤러리, 프로젝트 필터링, 모달 상세 보기 등 다양한 UX 기능을 포함해 디자인부터 반응형 개발까지 전 과정을 100% 수행한 개인 프로젝트입니다.',
         details: {
-            structure: '로딩화면, 히어로, 스킬, 작업물 등으로 구성된 원페이지',
+            structure:
+                '로딩, 히어로, 스킬, 프로젝트, 모달 등으로 구성된 원페이지',
             ratio: '디자인 100%, 코딩 100%',
         },
-        tags: ['Figma', 'React', 'SCSS', 'GSAP', 'Vercel'],
+        tags: ['Figma', 'React', 'JavaScript', 'SCSS', 'GSAP', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/portfolio',
             site: 'https://jyj-portfolio.vercel.app/',
@@ -31,12 +32,21 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: '헤라',
+        desc: '기존 HERA 웹사이트의 메인 디자인을 리뉴얼해 React로 재구성한 프로젝트입니다. GSAP ScrollTrigger를 적용해 스크롤 인터랙션, 고정(pinning), 텍스트 모션, 제품 섹션 전환 효과를 구현했으며 Slick과 Swiper를 활용해 실제 브랜드 쇼핑몰에 가까운 UI 패턴과 CTA 흐름을 구성했습니다. 섹션별 비디오 배경, 컬러 변경 슬라이더, 다양한 패럴랙스 인터렉션 등 브랜드 경험 요소를 반영해 디자인부터 개발까지 모두 수행한 리뉴얼 프로젝트입니다.',
         details: {
-            structure: '메인(원페이지)',
+            structure: '원페이지(메인)',
             ratio: '디자인 100%, 코딩 100%',
         },
-        tags: ['Figma', 'React', 'SCSS', 'GSAP', 'Swiper', 'Slick', 'Vercel'],
+        tags: [
+            'Figma',
+            'React',
+            'JavaScript',
+            'SCSS',
+            'GSAP',
+            'Swiper',
+            'Slick',
+            'Vercel',
+        ],
         links: {
             github: 'https://github.com/danbijyj/hera',
             site: 'https://jyj-hera.vercel.app/',
@@ -60,7 +70,15 @@ export const worksData = [
             team_size: 6,
             role: '기능구현 스토리보드 구성, 프로젝트 개발 설명 영상 녹음 및 녹화본, 음원/아티스트/굿즈 API수집, 음원 스트리밍/ 스트리밍 반응형/마이페이지/검색결과 코딩',
         },
-        tags: ['Figma', 'React', 'SCSS', 'Zustand', 'GSAP', 'Vercel'],
+        tags: [
+            'Figma',
+            'React',
+            'JavaScript',
+            'SCSS',
+            'Zustand',
+            'GSAP',
+            'Vercel',
+        ],
         links: {
             plan: 'https://www.figma.com/deck/NoKx4E58eUBprzkGeOZRVJ/%EC%82%AC%EC%9A%B4%EC%A6%88%EA%B5%BF%EC%A6%88-%EA%B8%B0%ED%9A%8D%EC%84%9C-ppt-%EC%A0%9C%EC%B6%9C%EC%9A%A9?node-id=35-102&viewport=-159%2C-143%2C0.73&t=7QmDeqLdcnYVKIly-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
             docu: 'https://www.figma.com/proto/R5xqSHRsA8xRjL8wsqCqbp/%EC%82%AC%EC%9A%B4%EC%A6%88%EA%B5%BF%EC%A6%88-%EA%B5%BF%ED%94%BC%ED%94%8C%EC%A6%88?page-id=136%3A334&node-id=2585-1572&viewport=-27%2C-1229%2C0.04&t=UPhNnYuju83wBj1t-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2516%3A17038&show-proto-sidebar=1',
@@ -90,6 +108,7 @@ export const worksData = [
         tags: [
             'Figma',
             'React',
+            'JavaScript',
             'Redux',
             'Styled-components',
             'React Slick',
@@ -114,10 +133,10 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'Javascript',
         type: 'personal',
-        desc: '기존 서울 시청 웹사이트를 리뉴얼했습니다. 디자인은 100%이고 헤더와 반응형만 코딩했습니다.',
+        desc: '기존 서울시 웹사이트의 올드한 디자인을 트렌드에 맞게 재해석하고 UI/UX 흐름을 새롭게 기획한 리뉴얼 프로젝트입니다. 메인 화면의 복잡하고 숨겨진 정보 구조를 사용자 중심으로 재정렬하고, 컬러 시스템과 인터랙션을 정비해 전반적인 브랜드 경험을 개선했습니다. 주요 슬라이더, 탭, 인터랙션 구성을 직접 기획하며 일부 스크립트도 수정해 의도를 반영한 메인 페이지 리뉴얼 작업입니다.',
         details: {
             structure: '원페이지(메인)',
-            ratio: '디자인 100%, 코딩 30%(헤더 및 모바일)',
+            ratio: '디자인 100%, 코딩 20%(헤더 및 일부수정)',
         },
         tags: [
             'Figma',
@@ -144,7 +163,7 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'Javascript',
         type: 'personal',
-        desc: 'CSS와 Javascript만을 사용하여 기존의 웰컴복지재단 웹사이트를 리디자인하고 코딩했습니다.',
+        desc: '기존 웰컴복지재단 웹사이트를 트렌디한 스타일로 리뉴얼하고 HTML, CSS, JavaScript만으로 재구성한 프로젝트입니다. 메뉴 오버 인터랙션, 스크롤 고정 헤더, 부드러운 탑 버튼 이동 등 주요 UI 흐름을 구현했으며, 메인 비주얼 슬라이더, 숫자 카운트 애니메이션, 카드 확장형 호버 UI 등 동적인 콘텐츠 요소를 모두 바닐라 JS로 제작했습니다. 콘텐츠 구조와 레이아웃을 현대적으로 재정비해 정보 전달력을 높였고, 디자인부터 마크업, 스타일, 스크립트까지 전 과정을 100% 수행한 리뉴얼 작업입니다.',
         details: {
             structure: '원페이지(메인)',
             ratio: '디자인 100%, 코딩 100%',
@@ -166,12 +185,23 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: '라우터 설명',
+        desc: 'React 기반으로 아웃백스테이크하우스 웹사이트를 구축한 프로젝트로, React Router를 활용해 페이지 라우팅 및 동적 라우팅을 구성했습니다. Pixabay API 연동으로 이미지 갤러리 데이터를 불러오고, JSON 데이터 기반 게시판과 페이지네이션 기능을 구현했습니다. 전역 스타일은 styled-components로 모듈화했으며, 슬라이더, 인터랙션 등의 스크립트 로직을 수정해 동작을 최적화한 프론트엔드 중심 프로젝트입니다.',
         details: {
             structure: '메인, 소개, 갤러리, 메뉴, 게시판',
             ratio: '디자인 100%, 코딩 100%',
         },
-        tags: ['React', 'Sass', 'GSAP', 'Vercel'],
+        tags: [
+            'Figma',
+            'React',
+            'React Router',
+            'Javascript',
+            'Styled-Components',
+            'Axios/Custom Hooks',
+            'Masonry Layout',
+            'REST API(Pixabay)',
+            'Swiper',
+            'Vercel',
+        ],
         links: {
             github: 'https://github.com/danbijyj/outback',
             site: 'https://jyj-outback.vercel.app/',
@@ -188,7 +218,7 @@ export const worksData = [
         skill1: 'HTML',
         skill2: 'Javascript',
         type: 'personal',
-        desc: '기존의 경동 웹사이트를 리디자인 없이 자바스크립트만으로 클론 코딩한 개인 프로젝트입니다.',
+        desc: 'HTML/CSS/Vanilla JavaScript 기반으로 제작된 경동 웹사이트 클론 프로젝트입니다. 메인 배너는 CSS transition을 이용한 슬라이드 방식으로 구성되며, 네비게이션 드롭다운, 메뉴 오버레이, Top 버튼 노출 등 주요 UI 요소는 클래스 토글과 스크롤 이벤트로 제어됩니다. 섹션별 offsetTop 값을 계산해 스크롤 위치에 따라 사이드 메뉴가 활성화되는 구조를 갖추고 있으며, 텍스트 및 요소 애니메이션은 CSS keyframes로 처리됩니다. jQuery 없이 순수 JavaScript로 DOM 제어, 이벤트 바인딩, 인터랙션 로직을 구현한 클론코딩 프로젝트입니다.',
         details: {
             structure: '원페이지(메인)',
             ratio: '코딩 100%',
