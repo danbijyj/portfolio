@@ -63,12 +63,12 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'team',
-        desc: 'Zustand를 활용한 음원 스트리밍 서비스와 아티스트 굿즈 예약 판매를 결합한 팀 프로젝트입니다. 스트리밍 일부만 반응형으로 제작했습니다.(우수상 수상)',
+        desc: 'Zustand를 활용한 음원 스트리밍 서비스와 굿즈 판매를 결합한 팀 프로젝트입니다. 스트리밍 일부만 반응형으로 제작했습니다.(우수상 수상)',
         details: {
             structure: '메인, 스트리밍, 굿즈, 검색, 마이페이지, 로그인 등',
             func: '음원재생, 정렬, 장르별분류, 음원담기, 좋아요, 아티스트상세, 아티스트검색, 굿즈예약구매, 장바구니, 카카오톡연동 로그인 등',
             team_size: 6,
-            role: '기능구현 스토리보드 구성, 프로젝트 개발 설명 영상 녹음 및 녹화본, 음원/아티스트/굿즈 API수집, 음원 스트리밍/ 스트리밍 반응형/마이페이지/검색결과 코딩',
+            role: '기능구현 스토리보드, 프로젝트 개발 설명 영상 녹음 및 녹화, API수집, 스트리밍/스트리밍 반응형/마이페이지/검색결과 코딩',
         },
         tags: [
             'Figma',
@@ -131,7 +131,7 @@ export const worksData = [
         tag: ['personal'],
         img: '/images/works_04.png',
         skill1: 'Design',
-        skill2: 'Javascript',
+        skill2: 'JavaScript',
         type: 'personal',
         desc: '기존 서울시 웹사이트의 올드한 디자인을 트렌드에 맞게 재해석하고 UI/UX 흐름을 새롭게 기획한 리뉴얼 프로젝트입니다. 메인 화면의 복잡하고 숨겨진 정보 구조를 사용자 중심으로 재정렬하고, 컬러 시스템과 인터랙션을 정비해 전반적인 브랜드 경험을 개선했습니다. 주요 슬라이더, 탭, 인터랙션 구성을 직접 기획하며 일부 스크립트도 수정해 의도를 반영한 메인 페이지 리뉴얼 작업입니다.',
         details: {
@@ -142,7 +142,7 @@ export const worksData = [
             'Figma',
             'HTML',
             'SCSS',
-            'Javascript',
+            'JavaScript',
             'GSAP',
             'Swiper',
             'Vercel',
@@ -161,14 +161,14 @@ export const worksData = [
         tag: ['personal'],
         img: '/images/works_01.png',
         skill1: 'Design',
-        skill2: 'Javascript',
+        skill2: 'JavaScript',
         type: 'personal',
         desc: '기존 웰컴복지재단 웹사이트를 트렌디한 스타일로 리뉴얼하고 HTML, CSS, JavaScript만으로 재구성한 프로젝트입니다. 메뉴 오버 인터랙션, 스크롤 고정 헤더, 부드러운 탑 버튼 이동 등 주요 UI 흐름을 구현했으며, 메인 비주얼 슬라이더, 숫자 카운트 애니메이션, 카드 확장형 호버 UI 등 동적인 콘텐츠 요소를 모두 바닐라 JS로 제작했습니다. 콘텐츠 구조와 레이아웃을 현대적으로 재정비해 정보 전달력을 높였고, 디자인부터 마크업, 스타일, 스크립트까지 전 과정을 100% 수행한 리뉴얼 작업입니다.',
         details: {
             structure: '원페이지(메인)',
             ratio: '디자인 100%, 코딩 100%',
         },
-        tags: ['Figma', 'HTML', 'CSS', 'Javascript', 'Vercel'],
+        tags: ['Figma', 'HTML', 'CSS', 'JavaScript', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/welcome.git',
             site: 'https://jyj-welcome.vercel.app/',
@@ -194,7 +194,7 @@ export const worksData = [
             'Figma',
             'React',
             'React Router',
-            'Javascript',
+            'JavaScript',
             'Styled-Components',
             'Axios/Custom Hooks',
             'Masonry Layout',
@@ -216,14 +216,14 @@ export const worksData = [
         tag: ['personal'],
         img: '/images/works_07.png',
         skill1: 'HTML',
-        skill2: 'Javascript',
+        skill2: 'JavaScript',
         type: 'personal',
         desc: 'HTML/CSS/Vanilla JavaScript 기반으로 제작된 경동 웹사이트 클론 프로젝트입니다. 메인 배너는 CSS transition을 이용한 슬라이드 방식으로 구성되며, 네비게이션 드롭다운, 메뉴 오버레이, Top 버튼 노출 등 주요 UI 요소는 클래스 토글과 스크롤 이벤트로 제어됩니다. 섹션별 offsetTop 값을 계산해 스크롤 위치에 따라 사이드 메뉴가 활성화되는 구조를 갖추고 있으며, 텍스트 및 요소 애니메이션은 CSS keyframes로 처리됩니다. jQuery 없이 순수 JavaScript로 DOM 제어, 이벤트 바인딩, 인터랙션 로직을 구현한 클론코딩 프로젝트입니다.',
         details: {
             structure: '원페이지(메인)',
             ratio: '코딩 100%',
         },
-        tags: ['HTML', 'CSS', 'Javascript', 'Vercel'],
+        tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/kyungdong-clone',
             site: 'https://jyj-kyungdong.vercel.app',
@@ -238,7 +238,7 @@ export const worksData = [
         tag: ['team'],
         img: '/images/works_06.png',
         skill1: 'Design',
-        skill2: 'Javascript',
+        skill2: 'JavaScript',
         type: 'team',
         desc: '기존 SRT 웹사이트를 Javascript만 사용하여 리디자인하고 리뉴얼한 미니 팀 프로젝트입니다.',
         details: {
@@ -247,7 +247,7 @@ export const worksData = [
             team_size: 4,
             role: '사이트맵, 오시는길, 회원가입, 고객센터',
         },
-        tags: ['Figma', 'HTML', 'CSS', 'Javascript', 'Vercel'],
+        tags: ['Figma', 'HTML', 'CSS', 'JavaScript', 'Vercel'],
         links: {
             github: 'https://github.com/danbijyj/SRT',
             site: 'https://jyj-srt.vercel.app/',
@@ -264,7 +264,7 @@ export const worksData = [
         skill1: 'React',
         skill2: 'Express',
         type: 'personal',
-        desc: 'Todos 애플리케이션입니다. 프론트엔드는 React + Redux, 백엔드는 Express + REST API + MongoDB로 구현되었습니다.',
+        desc: 'React + Redux Toolkit 기반 프론트엔드와 Express + MongoDB 기반 백엔드를 포함한 풀스택 Todo 애플리케이션입니다. REST API를 통해 CRUD 기능을 구현했고, Redux를 사용해 서버 데이터와 UI 상태를 관리합니다. 프론트엔드는 React 컴포넌트 구조와 SCSS 기반 스타일링을 사용했으며, 백엔드는 Express와 Mongoose로 API 및 데이터베이스를 구성한 프로젝트입니다.',
         details: {
             structure:
                 'Express Node.js 기반 백엔드 서버 구현, REST API CRUD 기능 제공, MongoDB Mongoose ODM으로 데이터 영속성 관리, Redux 전역 상태 관리로 UI와 서버 데이터 동기화',
@@ -275,13 +275,13 @@ export const worksData = [
             'Node.js',
             'REST API',
             'MongoDB',
+            'Axios',
             'React',
             'Redux',
-            'Vercel',
         ],
         links: {
             github: 'https://github.com/danbijyj/express-redux-todos',
         },
-        responsive: true,
+        responsive: false,
     },
 ];

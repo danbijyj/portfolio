@@ -83,6 +83,7 @@
                 .detail_list {
                     margin-left: 12px;
                     li {
+                        font-size: $fz-14;
                         line-height: 1.6;
                         display: grid;
                         grid-template-columns: 85px 1fr;
