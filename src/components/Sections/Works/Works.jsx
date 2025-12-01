@@ -119,8 +119,12 @@ const Works = () => {
     const handleItemClick = (item) => setSelectedItemId(item.id);
     const handleCloseModal = () => setSelectedItemId(null);
 
-    const col1 = filteredItems.filter((_, i) => i % 2 === 0);
-    const col2 = filteredItems.filter((_, i) => i % 2 !== 0);
+    // 모바일 여부 체크
+    const isMobile = window.innerWidth <= 768;
+
+    // PC일 때만 2컬럼 분리
+    const col1 = !isMobile ? filteredItems.filter((_, i) => i % 2 === 0) : null;
+    const col2 = !isMobile ? filteredItems.filter((_, i) => i % 2 !== 0) : null;
 
     return (
         <section id="works" className="works">
@@ -146,9 +150,12 @@ const Works = () => {
 
                 <div className="items_wrap">
                     <div className="items">
-                        {[col1, col2].map((col, colIndex) => (
-                            <div key={colIndex} className="items_col">
-                                {col.map((item) => (
+                        {isMobile ? (
+                            // -------------------------------
+                            // 📱 모바일: id 순서대로 단일 컬럼
+                            // -------------------------------
+                            <div className="items_col">
+                                {filteredItems.map((item) => (
                                     <div
                                         key={item.id}
                                         className="item"
@@ -175,7 +182,51 @@ const Works = () => {
                                     </div>
                                 ))}
                             </div>
-                        ))}
+                        ) : (
+                            // -------------------------------
+                            // 🖥 PC: 기존 2컬럼 유지
+                            // -------------------------------
+                            <>
+                                {[col1, col2].map((col, colIndex) => (
+                                    <div key={colIndex} className="items_col">
+                                        {col.map((item) => (
+                                            <div
+                                                key={item.id}
+                                                className="item"
+                                                onClick={() =>
+                                                    handleItemClick(item)
+                                                }
+                                            >
+                                                <div className="works_item">
+                                                    <div className="img_wrap">
+                                                        <img
+                                                            src={item.img}
+                                                            alt={item.title}
+                                                        />
+                                                    </div>
+                                                    <p className="ctgr">
+                                                        {item.ctgr}
+                                                    </p>
+                                                    <div className="title_wrap">
+                                                        <p>{item.title}</p>
+                                                        <div>
+                                                            <span>
+                                                                {item.skill1}
+                                                            </span>
+                                                            <span>
+                                                                {item.skill2}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="line"></div>
+                                                    <button>more</button>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
