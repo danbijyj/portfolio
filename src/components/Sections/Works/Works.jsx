@@ -119,10 +119,8 @@ const Works = () => {
     const handleItemClick = (item) => setSelectedItemId(item.id);
     const handleCloseModal = () => setSelectedItemId(null);
 
-    // 모바일 여부 체크
     const isMobile = window.innerWidth <= 480;
 
-    // PC일 때만 2컬럼 분리
     const col1 = !isMobile ? filteredItems.filter((_, i) => i % 2 === 0) : null;
     const col2 = !isMobile ? filteredItems.filter((_, i) => i % 2 !== 0) : null;
 
@@ -151,9 +149,6 @@ const Works = () => {
                 <div className="items_wrap">
                     <div className="items">
                         {isMobile ? (
-                            // -------------------------------
-                            // 📱 모바일: id 순서대로 단일 컬럼
-                            // -------------------------------
                             <div className="items_col">
                                 {filteredItems.map((item) => (
                                     <div
@@ -183,9 +178,6 @@ const Works = () => {
                                 ))}
                             </div>
                         ) : (
-                            // -------------------------------
-                            // 🖥 PC: 기존 2컬럼 유지
-                            // -------------------------------
                             <>
                                 {[col1, col2].map((col, colIndex) => (
                                     <div key={colIndex} className="items_col">
