@@ -15,11 +15,11 @@
     .modal_content {
         font-family: $font-kr;
         position: relative;
-        width: min(90%, 1400px);
-        height: 800px;
+        width: 1420px;
+        height: 820px;
         overflow-y: auto;
         background: $white;
-        padding: 110px 90px 30px;
+        padding: 110px 90px 90px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         transform: translateY(20px);
         animation: slideUp 0.4s ease forwards;
@@ -79,12 +79,14 @@
                     letter-spacing: 0px;
                     line-height: 1.5;
                     word-break: keep-all;
+                    white-space: pre-line;
                 }
                 .detail_list {
+                    margin-bottom: 40px;
                     margin-left: 12px;
                     li {
                         font-size: $fz-14;
-                        line-height: 1.6;
+                        line-height: 1.7;
                         display: grid;
                         grid-template-columns: 85px 1fr;
                         position: relative;
@@ -105,8 +107,8 @@
                     }
                 }
                 .tags {
-                    position: absolute;
-                    bottom: 0;
+                    // position: absolute;
+                    // bottom: 0;
                     display: flex;
                     gap: 6px;
                     flex-wrap: wrap;
