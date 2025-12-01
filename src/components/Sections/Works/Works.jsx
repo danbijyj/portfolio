@@ -120,7 +120,7 @@ const Works = () => {
     const handleCloseModal = () => setSelectedItemId(null);
 
     // 모바일 여부 체크
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.innerWidth <= 480;
 
     // PC일 때만 2컬럼 분리
     const col1 = !isMobile ? filteredItems.filter((_, i) => i % 2 === 0) : null;
