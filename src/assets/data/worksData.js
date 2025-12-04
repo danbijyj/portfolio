@@ -80,6 +80,7 @@ export const worksData = [
             'Zustand',
             'GSAP',
             'Vercel',
+            'GitHub Collaboration',
         ],
         links: {
             plan: 'https://www.figma.com/deck/NoKx4E58eUBprzkGeOZRVJ/%EC%82%AC%EC%9A%B4%EC%A6%88%EA%B5%BF%EC%A6%88-%EA%B8%B0%ED%9A%8D%EC%84%9C-ppt-%EC%A0%9C%EC%B6%9C%EC%9A%A9?node-id=35-102&viewport=-159%2C-143%2C0.73&t=7QmDeqLdcnYVKIly-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
@@ -118,6 +119,7 @@ export const worksData = [
             'Swiper',
             'Slick',
             'Vercel',
+            'GitHub Collaboration',
         ],
         links: {
             plan: 'https://www.figma.com/proto/VJMMcXBJW2mZ42WjT8gl5H/4%EC%A1%B0_%ED%98%84%EB%8C%80%EC%8B%9D%ED%92%88%EA%B4%80-%ED%88%AC%ED%99%88_%EA%B8%B0%ED%9A%8D%EC%84%9C-%EC%A0%9C%EC%B6%9C%EC%9A%A9-?node-id=2015-5122&p=f&t=1hLzdG5PfOeIYTTX-1&scaling=contain&content-scaling=fixed&page-id=0%3A1',
