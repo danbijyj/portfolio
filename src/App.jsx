@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Loader from './components/Loader/Loader';
 import NavBar from './components/NavBar/NavBar';
 import TopButton from './components/TopButton/TopButton';
-import Home from './components/Home/Home';
+import Hero from './components/Hero/Hero';
 import AboutMe from './components/Sections/AboutMe/AboutMe';
 import Skills from './components/Sections/Skills/Skills';
 import WorksView from './components/Sections/WorksView/WorksView';
@@ -57,7 +57,7 @@ const App = () => {
                     transition: 'opacity 0.5s ease',
                 }}
             >
-                <Home startAnimation={isLoaded} />
+                <Hero startAnimation={isLoaded} />
                 <AboutMe />
                 <Skills />
                 <WorksView />

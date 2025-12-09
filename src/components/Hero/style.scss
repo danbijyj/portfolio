@@ -1,6 +1,6 @@
 @use '../../scss/global.scss' as *;
 
-.home {
+.hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -57,7 +57,7 @@
 }
 
 @media (max-width: $breakpoint-tablet) {
-    .home {
+    .hero {
         width: 100%;
         max-width: 100vw;
         .content {
@@ -83,7 +83,7 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-    .home {
+    .hero {
         width: 100%;
         max-width: 100vw;
         .content {

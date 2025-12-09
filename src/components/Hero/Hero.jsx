@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import './style.scss';
 
-const Home = ({ startAnimation }) => {
+const Hero = ({ startAnimation }) => {
     useEffect(() => {
         const h1 = document.querySelector('.content h1');
         if (h1) {
@@ -42,7 +42,7 @@ const Home = ({ startAnimation }) => {
     }, [startAnimation]);
 
     return (
-        <section id="home" className="home">
+        <section id="hero" className="hero">
             <div className="bg"></div>
             <div className="bg bg2"></div>
             <div className="bg bg3"></div>
@@ -56,4 +56,4 @@ const Home = ({ startAnimation }) => {
     );
 };
 
-export default Home;
+export default Hero;

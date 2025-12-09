@@ -39,7 +39,7 @@ const NavBar = () => {
             <div className="inner">
                 <div className="logo_line"></div>
                 <div className="logo">
-                    <a href="#home">
+                    <a href="#hero">
                         <p>Portfolio by</p>
                         <h1>{'{ JANG YOO JUNG }'}</h1>
                     </a>
