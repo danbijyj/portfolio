@@ -212,7 +212,7 @@ export const worksData = [
             github: 'https://github.com/danbijyj/outback',
             site: 'https://jyj-outback.vercel.app/',
         },
-        responsive: true,
+        responsive: false,
     },
     {
         id: 8,
