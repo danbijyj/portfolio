@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollToPlugin);
 const Works = () => {
     const filtersRefs = useRef([]);
     const [filter, setFilter] = useState('all');
-    const [activeIndex, setActiveIndex] = useState(0);
     const [filteredItems, setFilteredItems] = useState(worksData);
+    const [activeIndex, setActiveIndex] = useState(0);
     const [selectedItemId, setSelectedItemId] = useState(null);
 
     const filters = [

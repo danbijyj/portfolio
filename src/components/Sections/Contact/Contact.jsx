@@ -14,15 +14,15 @@ const Contact = () => {
             marqueeInner.appendChild(clone);
         });
 
-        let currentScroll = 0;
-        let isScrollingDown = true;
-
         const tween = gsap.to(marqueeInner, {
             x: '-50%',
             repeat: -1,
-            duration: 50,
+            duration: 70,
             ease: 'linear',
         });
+
+        let currentScroll = 0;
+        let isScrollingDown = true;
 
         const handleScroll = () => {
             const scrollTop =

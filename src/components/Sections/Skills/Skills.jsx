@@ -14,7 +14,7 @@ const Skills = () => {
     const progressRef = useRef(null);
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+        const handleResize = () => setIsMobile(window.innerWidth <= 1200);
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
