@@ -34,7 +34,7 @@
                         display: inline-block;
                         overflow: visible;
                         line-height: 1.3;
-                        pointer-events: none;
+                        //pointer-events: none;
                         font-weight: 300;
                         span {
                             display: inline-block;
@@ -176,6 +176,8 @@
                 width: 100%;
                 height: auto;
                 margin-bottom: 20px;
+                position: relative;
+                z-index: 10;
                 h2 {
                     margin: 70px 0 20px;
                 }
@@ -183,6 +185,8 @@
             .items_wrap {
                 padding-top: 50px;
                 width: 100%;
+                position: relative;
+                z-index: 1;
                 .items {
                     gap: 28px;
                     .items_col {
@@ -232,12 +236,15 @@
         max-width: 100vw;
         .inner {
             .filters_wrap {
+                z-index: 10 !important;
                 h2 {
                     margin-top: 50px;
                 }
             }
             .items_wrap {
                 padding-top: 20px;
+                position: relative;
+                z-index: 1 !important;
                 .items {
                     flex-direction: column;
                     gap: 0;
