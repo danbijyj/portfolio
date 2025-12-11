@@ -20,7 +20,7 @@ export const skillsData = [
             { name: 'React Router', icon: '/images/icon_09.png' },
             { name: 'Redux', icon: '/images/icon_10.png' },
             { name: 'Zustand', icon: '/images/icon_11.png' },
-            { name: 'Styled-Components', icon: '/images/icon_12.png' },
+            { name: 'Styled Components', icon: '/images/icon_12.png' },
             { name: 'GSAP', icon: '/images/icon_13.png' },
         ],
     },
