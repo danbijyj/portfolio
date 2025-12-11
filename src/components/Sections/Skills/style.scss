@@ -115,18 +115,18 @@
                     text-align: right;
                     .list {
                         @include font-style(
-                            $size: $fz-44,
+                            $size: $fz-36,
                             $weight: $fw-300,
                             $color: $grey
                         );
-                        line-height: 1.4;
+                        line-height: 1.8;
                         cursor: pointer;
                         transition: color 0.3s ease, border 0.3s ease;
                     }
                     .active {
                         @include font-style(
-                            $size: $fz-44,
-                            $weight: $fw-600,
+                            $size: $fz-36,
+                            $weight: $fw-500,
                             $color: $black
                         );
                         border-bottom: 1px solid $green;

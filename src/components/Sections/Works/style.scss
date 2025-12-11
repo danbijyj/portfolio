@@ -11,7 +11,7 @@
             position: sticky;
             top: 0;
             height: 100vh;
-            width: 500px;
+            width: 350px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -30,11 +30,12 @@
                         cursor: pointer;
                         position: relative;
                         display: block;
-                        width: 100vw;
+                        width: auto;
+                        display: inline-block;
                         overflow: visible;
                         line-height: 1.3;
                         pointer-events: none;
-                        font-weight: 400;
+                        font-weight: 300;
                         span {
                             display: inline-block;
                             position: relative;
@@ -47,7 +48,7 @@
                     &.active h3 {
                         span {
                             @include font-style(
-                                $weight: $fw-500,
+                                $weight: $fw-400,
                                 $color: $blue
                             );
                             line-height: 1;
@@ -72,7 +73,7 @@
             }
             .items {
                 display: flex;
-                gap: 100px;
+                gap: 50px;
                 width: 100%;
                 box-sizing: border-box;
                 .items_col {
@@ -82,7 +83,7 @@
                         top: 80px;
                     }
                     .item {
-                        margin-bottom: 80px;
+                        margin-bottom: 50px;
                         cursor: pointer;
                         .works_item {
                             width: 400px;

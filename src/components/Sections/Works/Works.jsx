@@ -23,14 +23,14 @@ const Works = () => {
 
     const getFontSize = (isActive = false) => {
         const width = window.innerWidth;
-        let active = 100;
-        let inactive = 60;
+        let active = 70;
+        let inactive = 50;
         if (width <= 480) {
             active = 48;
             inactive = 28;
         } else if (width <= 768) {
-            active = 60;
-            inactive = 36;
+            active = 50;
+            inactive = 32;
         }
         return isActive ? `${active}px` : `${inactive}px`;
     };
