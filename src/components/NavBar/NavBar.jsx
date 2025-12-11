@@ -16,19 +16,22 @@ const NavBar = () => {
                 ease: 'none',
             });
         };
+
         const links = document.querySelectorAll('nav a');
-        links.forEach((link) => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const href = link.getAttribute('href');
-                const target = document.querySelector(href);
-                if (target) smoothScrollTo(target);
-                setMenuOpen(false);
-            });
-        });
+
+        const handleClick = (e) => {
+            e.preventDefault();
+            const href = e.currentTarget.getAttribute('href');
+            const target = document.querySelector(href);
+            if (target) smoothScrollTo(target);
+            setMenuOpen(false);
+        };
+
+        links.forEach((link) => link.addEventListener('click', handleClick));
+
         return () => {
             links.forEach((link) =>
-                link.removeEventListener('click', () => {})
+                link.removeEventListener('click', handleClick)
             );
         };
     }, []);
@@ -38,12 +41,14 @@ const NavBar = () => {
             <div className="line left"></div>
             <div className="inner">
                 <div className="logo_line"></div>
+
                 <div className="logo">
                     <a href="#hero">
                         <p>Portfolio by</p>
                         <h1>{'{ JANG YOO JUNG }'}</h1>
                     </a>
                 </div>
+
                 <div
                     className={`hamburger ${menuOpen ? 'active' : ''}`}
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -52,6 +57,7 @@ const NavBar = () => {
                     <span></span>
                     <span></span>
                 </div>
+
                 <div className={`menu ${menuOpen ? 'open' : ''}`}>
                     <ul>
                         <li>

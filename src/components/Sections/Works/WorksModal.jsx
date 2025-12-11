@@ -1,9 +1,28 @@
+import { useEffect } from 'react';
 import { worksData } from '../../../assets/data/worksData';
 import './styleModal.scss';
 
 const WorksModal = ({ itemId, onClose }) => {
     const item = worksData.find((data) => data.id === itemId);
     if (!item) return null;
+
+    useEffect(() => {
+        const body = document.body;
+        body.classList.add('modal-open');
+        const scrollBarWidth =
+            window.innerWidth - document.documentElement.clientWidth;
+        const originalOverflow = body.style.overflow;
+        const originalPaddingRight = body.style.paddingRight;
+
+        body.style.overflow = 'hidden';
+        body.style.paddingRight = `${scrollBarWidth}px`;
+
+        return () => {
+            body.classList.remove('modal-open');
+            body.style.overflow = originalOverflow;
+            body.style.paddingRight = originalPaddingRight;
+        };
+    }, []);
 
     return (
         <div className="modal_overlay" onClick={onClose}>
@@ -14,6 +33,7 @@ const WorksModal = ({ itemId, onClose }) => {
                 <div className="content_wrap">
                     <div className="text">
                         <p className="ctgr">{item.ctgr}</p>
+
                         <div className="title_wrap">
                             <h2>{item.title}</h2>
                             {item.responsive && <span>반응형</span>}
@@ -42,7 +62,6 @@ const WorksModal = ({ itemId, onClose }) => {
                                         {item.details.structure}
                                     </span>
                                 </li>
-
                                 <li>
                                     <span className="label">주요기능</span>
                                     <span className="value">
@@ -63,6 +82,7 @@ const WorksModal = ({ itemId, onClose }) => {
                                 </li>
                             </ul>
                         )}
+
                         <div className="tags">
                             {item.tags?.map((tag, i) => (
                                 <span key={i}>{tag}</span>

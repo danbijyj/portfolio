@@ -6,12 +6,12 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     @include flex-center();
     z-index: 1000;
     opacity: 0;
     animation: fadeIn 0.3s ease forwards;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     .modal_content {
         font-family: $font-kr;
         position: relative;

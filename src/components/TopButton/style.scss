@@ -4,7 +4,7 @@
     z-index: 1000;
     position: fixed;
     right: 30px;
-    bottom: 70px;
+    bottom: 30px;
     font-size: 48px;
     color: $grey7;
     border: 1px solid $grey7;
@@ -31,6 +31,8 @@
 
 @media (max-width: $breakpoint-tablet) {
     .top {
+        right: 20px;
+        bottom: 20px;
         font-size: 40px;
         padding: 10px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
@@ -39,7 +41,7 @@
 @media (max-width: $breakpoint-mobile) {
     .top {
         right: 15px;
-        bottom: 60px;
+        bottom: 15px;
         font-size: 32px;
         padding: 8px;
     }

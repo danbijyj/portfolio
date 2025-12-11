@@ -3,9 +3,12 @@
 .nav {
     position: fixed;
     top: -70px;
-    display: flex;
+    left: 0;
+    right: 0;
     width: 100%;
+    // overflow-x: hidden;
     height: 70px;
+    display: flex;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
@@ -32,6 +35,8 @@
         border-left: 1px solid #000;
         position: relative;
         box-sizing: border-box;
+        width: 100%;
+        max-width: 1200px;
         .logo_line {
             position: absolute;
             top: 0;
@@ -70,9 +75,6 @@
                     padding: 5px 15px;
                     border: 1px solid transparent;
                     transition: 0.3s ease;
-                    &.active {
-                        border: 1px solid #000;
-                    }
                     &:hover {
                         border: 1px solid #000;
                     }
@@ -84,20 +86,19 @@
         }
     }
 }
+
 @media (max-width: $breakpoint-tablet) {
     .nav {
-        position: fixed !important;
-        top: -70px;
         left: 0;
-        width: 100%;
-        max-width: 100vw;
+        right: 0;
+        width: 100vw;
         height: 70px;
+        top: -70px;
         .line {
             display: none;
         }
         .inner {
             width: 100%;
-            min-width: auto;
             padding: 0 40px;
             border-left: none;
             box-sizing: border-box;
@@ -155,9 +156,11 @@
                     flex-direction: column;
                     gap: 20px;
                     padding: 20px 40px;
+
                     a {
                         padding: 0;
                         border: none;
+
                         &.active {
                             border: none;
                         }
@@ -166,6 +169,7 @@
                         }
                     }
                 }
+
                 &.open {
                     opacity: 1;
                 }
@@ -173,17 +177,15 @@
         }
     }
 }
+
 @media (max-width: $breakpoint-mobile) {
     .nav {
-        position: fixed !important;
+        width: 100vw;
         top: -70px;
-        left: 0;
-        width: 100%;
-        max-width: 100vw;
-        height: 70px;
+
         .inner {
             padding: 0 20px;
-            box-sizing: border-box;
+
             .menu {
                 ul {
                     padding: 10px 20px;
