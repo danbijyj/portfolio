@@ -1,7 +1,6 @@
 @use '../../../scss/global.scss' as *;
 
 .skills {
-    // min-height: 100vh;
     background-color: $blue;
     overflow: hidden;
     position: relative;
@@ -20,6 +19,7 @@
     }
     .inner {
         flex: 1;
+        padding-bottom: 150px;
         .skill_wrap {
             z-index: 2;
             position: relative;
