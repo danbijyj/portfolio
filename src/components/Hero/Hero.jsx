@@ -4,7 +4,7 @@ import './style.scss';
 
 const Hero = ({ startAnimation }) => {
     useEffect(() => {
-        const h1 = document.querySelector('.content h1');
+        const h1 = document.querySelector('#hero .inner h1');
         if (h1) {
             gsap.set(h1, { opacity: 0 });
         }
@@ -13,7 +13,7 @@ const Hero = ({ startAnimation }) => {
     useEffect(() => {
         if (!startAnimation) return;
 
-        const h1 = document.querySelector('.content h1');
+        const h1 = document.querySelector('#hero .inner h1');
         if (!h1) return;
 
         const text = h1.textContent || '';
@@ -46,7 +46,7 @@ const Hero = ({ startAnimation }) => {
             <div className="bg"></div>
             <div className="bg bg2"></div>
             <div className="bg bg3"></div>
-            <div className="content">
+            <div className="inner">
                 <p className="whoami">{'<Who am I ?>'}</p>
                 <h1>Frontend Developer</h1>
                 <p>{'</Who codes with clarity'}</p>

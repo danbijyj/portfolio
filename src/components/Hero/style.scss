@@ -25,10 +25,8 @@
     .bg3 {
         animation-duration: 5s;
     }
-    .content {
-        width: 1277px;
+    .inner {
         z-index: 10;
-        margin: 0 auto;
         .whoami {
             color: #101c41;
             opacity: 0.5;
@@ -37,7 +35,7 @@
         }
         h1 {
             @include font-style(
-                $size: $fz-130,
+                $size: $fz-120,
                 $weight: $fw-900,
                 $color: $white
             );
@@ -60,7 +58,7 @@
     .hero {
         width: 100%;
         max-width: 100vw;
-        .content {
+        .inner {
             width: 100%;
             max-width: 100vw;
             padding: 0 40px;
@@ -86,7 +84,7 @@
     .hero {
         width: 100%;
         max-width: 100vw;
-        .content {
+        .inner {
             width: 100%;
             max-width: 100vw;
             padding: 0 20px;

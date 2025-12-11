@@ -25,7 +25,6 @@ const Works = () => {
         const width = window.innerWidth;
         let active = 100;
         let inactive = 60;
-
         if (width <= 480) {
             active = 48;
             inactive = 28;
@@ -33,7 +32,6 @@ const Works = () => {
             active = 60;
             inactive = 36;
         }
-
         return isActive ? `${active}px` : `${inactive}px`;
     };
 

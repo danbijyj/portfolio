@@ -17,7 +17,7 @@
     height: 100%;
 }
 
-@mixin container($max: 1410px) {
+@mixin container($max: 1200px) {
     width: 100%;
     max-width: $max;
     margin: 0 auto;

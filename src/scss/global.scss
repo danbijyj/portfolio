@@ -17,7 +17,8 @@ body {
     width: 100%;
 }
 .inner {
-    width: 1410px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     h2 {
         @include font-style($size: $fz-64, $weight: $fw-100);
