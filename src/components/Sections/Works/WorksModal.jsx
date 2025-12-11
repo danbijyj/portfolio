@@ -7,20 +7,25 @@ const WorksModal = ({ itemId, onClose }) => {
     if (!item) return null;
 
     useEffect(() => {
-        const body = document.body;
-        body.classList.add('modal-open');
-        const scrollBarWidth =
-            window.innerWidth - document.documentElement.clientWidth;
-        const originalOverflow = body.style.overflow;
-        const originalPaddingRight = body.style.paddingRight;
-
-        body.style.overflow = 'hidden';
-        body.style.paddingRight = `${scrollBarWidth}px`;
+        const html = document.documentElement;
+        const scrollY = window.scrollY;
+        const originalScrollBehavior = getComputedStyle(html).scrollBehavior;
+        html.style.scrollBehavior = 'auto';
+        html.dataset.scrollY = scrollY;
+        html.style.overflowY = 'scroll';
+        html.style.position = 'fixed';
+        html.style.top = `-${scrollY}px`;
+        html.style.width = '100%';
 
         return () => {
-            body.classList.remove('modal-open');
-            body.style.overflow = originalOverflow;
-            body.style.paddingRight = originalPaddingRight;
+            const savedY = Number(html.dataset.scrollY || 0);
+            html.style.position = '';
+            html.style.top = '';
+            window.scrollTo(0, savedY);
+            html.style.overflowY = '';
+            html.style.width = '';
+            html.style.scrollBehavior = originalScrollBehavior;
+            delete html.dataset.scrollY;
         };
     }, []);
 
@@ -33,7 +38,6 @@ const WorksModal = ({ itemId, onClose }) => {
                 <div className="content_wrap">
                     <div className="text">
                         <p className="ctgr">{item.ctgr}</p>
-
                         <div className="title_wrap">
                             <h2>{item.title}</h2>
                             {item.responsive && <span>반응형</span>}
@@ -82,7 +86,6 @@ const WorksModal = ({ itemId, onClose }) => {
                                 </li>
                             </ul>
                         )}
-
                         <div className="tags">
                             {item.tags?.map((tag, i) => (
                                 <span key={i}>{tag}</span>

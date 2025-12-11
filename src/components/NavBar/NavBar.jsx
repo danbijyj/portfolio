@@ -41,14 +41,12 @@ const NavBar = () => {
             <div className="line left"></div>
             <div className="inner">
                 <div className="logo_line"></div>
-
                 <div className="logo">
                     <a href="#hero">
                         <p>Portfolio by</p>
                         <h1>{'{ JANG YOO JUNG }'}</h1>
                     </a>
                 </div>
-
                 <div
                     className={`hamburger ${menuOpen ? 'active' : ''}`}
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -57,7 +55,6 @@ const NavBar = () => {
                     <span></span>
                     <span></span>
                 </div>
-
                 <div className={`menu ${menuOpen ? 'open' : ''}`}>
                     <ul>
                         <li>
