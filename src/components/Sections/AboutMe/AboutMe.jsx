@@ -65,7 +65,7 @@ const AboutMe = () => {
                                 </p>
                                 <ul>
                                     <li>
-                                        <span>* </span>UX/UI Design
+                                        <span>* </span>UX/UI Designer
                                     </li>
                                     <li>
                                         <span>* </span>Web Publisher
