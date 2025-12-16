@@ -48,8 +48,8 @@ const Hero = ({ startAnimation }) => {
             <div className="bg bg3"></div>
             <div className="inner">
                 <p className="whoami">{'<Who am I ?>'}</p>
-                <h1>Frontend Developer</h1>
-                <p>{'</Who codes with clarity'}</p>
+                <h1>Web Developer</h1>
+                <p>{'</who codes with clarity'}</p>
                 <p>{'and design sense >'}</p>
             </div>
         </section>
