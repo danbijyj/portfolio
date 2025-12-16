@@ -43,8 +43,8 @@ const AboutMe = () => {
                                 장유정<span>JANG YOO JUNG</span>
                             </h3>
                             <p>
-                                안녕하세요. 감각과 논리를 모두 갖춘 프론트엔드
-                                개발자를 꿈꾸는 장유정입니다.
+                                안녕하세요. 감각과 논리를 모두 갖춘 개발자를
+                                꿈꾸는 장유정입니다.
                             </p>
                             <p>
                                 깔끔한 코드와 자연스러운 디자인, 사용자 중심의
@@ -68,10 +68,10 @@ const AboutMe = () => {
                                         <span>* </span>UX/UI Design
                                     </li>
                                     <li>
-                                        <span>* </span>Web Publishing
+                                        <span>* </span>Web Publisher
                                     </li>
                                     <li>
-                                        <span>* </span>Frontend Develope
+                                        <span>* </span>Frontend Developer
                                     </li>
                                 </ul>
                             </div>
