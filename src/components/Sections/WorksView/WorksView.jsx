@@ -35,14 +35,14 @@ const WorksView = () => {
         const handleMouseMove = (e) => {
             const itemEls = gallery.querySelectorAll('.item');
             itemEls.forEach((el, index) => {
-                const speed = items[index]?.parllaxSpeed ?? 0.02;
+                const speed = items[index]?.parallaxSpeed ?? 0.02;
                 const deltaX = (e.clientX - window.innerWidth / 2) * speed;
                 const deltaY = (e.clientY - window.innerHeight / 2) * speed;
                 gsap.to(el, {
-                    x: deltaX * speed,
-                    y: deltaY * speed,
-                    duration: 0.2,
-                    ease: 'power2.out',
+                    x: deltaX,
+                    y: deltaY,
+                    duration: 0.6,
+                    ease: 'power3.out',
                     overwrite: true,
                 });
             });
