@@ -39,9 +39,10 @@ const WorksView = () => {
                 const deltaX = (e.clientX - window.innerWidth / 2) * speed;
                 const deltaY = (e.clientY - window.innerHeight / 2) * speed;
                 gsap.to(el, {
-                    x: deltaX,
-                    y: deltaY,
-                    duration: 0.75,
+                    x: deltaX * speed,
+                    y: deltaY * speed,
+                    duration: 0.2,
+                    ease: 'power2.out',
                     overwrite: true,
                 });
             });
