@@ -25,6 +25,39 @@ export const worksData = [
     {
         id: 2,
         ctgr: 'Personal Project',
+        title: '에스더버니 미니샵',
+        subtitle: 'Personal Project',
+        tag: ['personal'],
+        img: '/images/works_11.png',
+        skill1: 'Design',
+        skill2: 'React',
+        type: 'personal',
+        desc: 'React와 Redux Toolkit을 기반으로 이커머스 핵심 기능을 구현한 미니 프로젝트입니다. 상품 목록, 장바구니, 인증, 게시판, 리뷰, 페이지네이션 등 실제 서비스 흐름을 기준으로 기능을 구성했으며, 전역 상태는 도메인 단위로 분리해 장바구니 계산 로직, 인증 상태, 페이지 상태를 명확히 관리했습니다. 카카오 로그인과 로컬 인증을 함께 적용해 인증 흐름을 구성했으며, localStorage 연동을 통해 상태 유지 UX를 고려했습니다. 기획, 디자인, 설계 및 구현 전 과정을 단독으로 수행한 프로젝트로, 비동기 데이터 처리와 컴포넌트 설계를 경험했습니다.',
+        details: {
+            structure:
+                '메인, 소개, 뉴스, 상품, 게시판, 로그인, 회원가입, 장바구니',
+            ratio: '디자인 100%, 코딩 100%',
+        },
+        tags: [
+            'Figma',
+            'React',
+            'React Router',
+            'JavaScript',
+            'Redux Toolkit',
+            'Axios',
+            'Styled-Components',
+            'Swiper',
+            'Vercel',
+        ],
+        links: {
+            github: 'https://github.com/danbijyj/estherbunny',
+            site: 'https://estherbunny.vercel.app/',
+        },
+        responsive: false,
+    },
+    {
+        id: 3,
+        ctgr: 'Personal Project',
         title: '헤라',
         subtitle: 'Personal Project',
         tag: ['personal'],
@@ -54,7 +87,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 3,
+        id: 4,
         ctgr: 'Team Project',
         title: 'SoundsGoods',
         subtitle: 'Team Project',
@@ -91,7 +124,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 4,
+        id: 5,
         ctgr: 'Team Project',
         title: '현대식품관 투홈',
         subtitle: 'Team Project',
@@ -112,7 +145,7 @@ export const worksData = [
             'Figma',
             'React',
             'JavaScript',
-            'Redux',
+            'Redux Toolkit',
             'Styled-components',
             'GSAP',
             'AOS',
@@ -130,7 +163,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 5,
+        id: 6,
         ctgr: 'Personal Project',
         title: '서울시청',
         subtitle: 'Personal Project',
@@ -160,7 +193,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 6,
+        id: 7,
         ctgr: 'Personal Project',
         title: '웰컴복지재단',
         subtitle: 'Personal Project',
@@ -182,7 +215,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 7,
+        id: 8,
         ctgr: 'Personal Project',
         title: '아웃백스테이크하우스',
         subtitle: 'Personal Project',
@@ -215,7 +248,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 8,
+        id: 9,
         ctgr: 'Personal Project',
         title: '경동(클론코딩)',
         subtitle: 'Personal Project',
@@ -237,7 +270,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 9,
+        id: 10,
         ctgr: 'Team Project',
         title: 'SRT',
         subtitle: 'Team Project',
@@ -262,7 +295,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 10,
+        id: 11,
         ctgr: 'Personal Project',
         title: 'Express-Redux',
         subtitle: 'Personal Project',
@@ -284,7 +317,7 @@ export const worksData = [
             'MongoDB',
             'Axios',
             'React',
-            'Redux',
+            'Redux Toolkit',
         ],
         links: {
             github: 'https://github.com/danbijyj/express-redux-todos',

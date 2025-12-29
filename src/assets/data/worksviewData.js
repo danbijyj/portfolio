@@ -12,6 +12,10 @@ const items = [
         parallaxSpeed: 0.08,
     },
     {
+        img: '/images/wv_11.png',
+        parallaxSpeed: 0.1,
+    },
+    {
         img: '/images/wv_04.png',
         parallaxSpeed: 0.12,
     },
