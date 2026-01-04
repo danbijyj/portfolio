@@ -34,7 +34,7 @@ const AboutMe = () => {
                 <h2>Ab*ut me</h2>
                 <div className="con">
                     <div className="pic" ref={riseRef}>
-                        <img src="/images/me.jpg" alt="" />
+                        <img src="/images/me.jpg" alt="about me" />
                         <span>*</span>
                     </div>
                     <div className="intro">
