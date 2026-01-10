@@ -2,25 +2,31 @@ export const worksData = [
     {
         id: 1,
         ctgr: 'Personal Project',
-        title: '개인 포트폴리오',
+        title: '경기도 공공 도서관 찾기',
         subtitle: 'Personal Project',
         tag: ['personal'],
-        img: '/images/works_05.png',
+        img: '/images/works_12.png',
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: 'React 기반의 원페이지 포트폴리오로 GSAP ScrollTrigger와 Timeline을 활용해 로딩 시퀀스, 스크롤 인터랙션, 텍스트 애니메이션 등을 구현했습니다. 전역 SCSS 구조를 설계해 일관된 스타일 시스템을 구축했으며 컴포넌트를 체계적으로 분리하여 자연스러운 화면 전환을 구성했습니다. 또한 마우스 패럴랙스 갤러리, 프로젝트 필터링, 모달 상세 보기 등 다양한 UX 기능을 포함해 디자인부터 반응형 개발까지 전 과정을 100% 수행한 개인 프로젝트입니다.',
+        desc: '공공데이터 RESTful API를 활용해 경기도 공공 도서관 정보를 조회하는 웹 애플리케이션을 구현했습니다. API 응답 데이터를 원본 상태로 관리하고, 검색어/지역 필터링/정렬/더보기 페이지네이션을 클라이언트 파생 상태로 분리해 처리했습니다. 검색 입력에는 debounce를 적용해 불필요한 렌더링을 줄이고 UX를 개선했으며, API 키를 환경변수로 관리해 코드에 직접 노출되지 않도록 했습니다. 데이터 흐름과 사용자 경험을 함께 고려한 구조 설계를 통해 실제 서비스에 가까운 REST API 활용 경험을 쌓았습니다.',
         details: {
-            structure:
-                '로딩, 히어로, 스킬, 프로젝트, 모달 등으로 구성된 원페이지',
+            structure: '히어로, 검색창, 도서관 리스트 등으로 구성된 원페이지',
             ratio: '디자인 100%, 코딩 100%',
         },
-        tags: ['Figma', 'React', 'JavaScript', 'SCSS', 'GSAP', 'Vercel'],
+        tags: [
+            'Figma',
+            'React',
+            'JavaScript',
+            'Public REST API',
+            'SCSS',
+            'Vercel',
+        ],
         links: {
-            github: 'https://github.com/danbijyj/portfolio',
-            site: 'https://jyj-portfolio.vercel.app/',
+            github: 'https://github.com/danbijyj/library',
+            site: 'https://jyj-library.vercel.app/',
         },
-        responsive: true,
+        responsive: false,
     },
     {
         id: 2,
@@ -58,6 +64,29 @@ export const worksData = [
     {
         id: 3,
         ctgr: 'Personal Project',
+        title: '개인 포트폴리오',
+        subtitle: 'Personal Project',
+        tag: ['personal'],
+        img: '/images/works_05.png',
+        skill1: 'Design',
+        skill2: 'React',
+        type: 'personal',
+        desc: 'React 기반의 원페이지 포트폴리오로 GSAP ScrollTrigger와 Timeline을 활용해 로딩 시퀀스, 스크롤 인터랙션, 텍스트 애니메이션 등을 구현했습니다. 전역 SCSS 구조를 설계해 일관된 스타일 시스템을 구축했으며 컴포넌트를 체계적으로 분리하여 자연스러운 화면 전환을 구성했습니다. 또한 마우스 패럴랙스 갤러리, 프로젝트 필터링, 모달 상세 보기 등 다양한 UX 기능을 포함해 디자인부터 반응형 개발까지 전 과정을 100% 수행한 개인 프로젝트입니다.',
+        details: {
+            structure:
+                '로딩, 히어로, 스킬, 프로젝트, 모달 등으로 구성된 원페이지',
+            ratio: '디자인 100%, 코딩 100%',
+        },
+        tags: ['Figma', 'React', 'JavaScript', 'SCSS', 'GSAP', 'Vercel'],
+        links: {
+            github: 'https://github.com/danbijyj/portfolio',
+            site: 'https://jyj-portfolio.vercel.app/',
+        },
+        responsive: true,
+    },
+    {
+        id: 4,
+        ctgr: 'Personal Project',
         title: '헤라',
         subtitle: 'Personal Project',
         tag: ['personal'],
@@ -87,7 +116,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 4,
+        id: 5,
         ctgr: 'Team Project',
         title: 'SoundsGoods',
         subtitle: 'Team Project',
@@ -124,7 +153,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 5,
+        id: 6,
         ctgr: 'Team Project',
         title: '현대식품관 투홈',
         subtitle: 'Team Project',
@@ -163,7 +192,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 6,
+        id: 7,
         ctgr: 'Personal Project',
         title: '서울시청',
         subtitle: 'Personal Project',
@@ -193,7 +222,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 7,
+        id: 8,
         ctgr: 'Personal Project',
         title: '웰컴복지재단',
         subtitle: 'Personal Project',
@@ -215,7 +244,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 8,
+        id: 9,
         ctgr: 'Personal Project',
         title: '아웃백스테이크하우스',
         subtitle: 'Personal Project',
@@ -248,7 +277,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 9,
+        id: 10,
         ctgr: 'Personal Project',
         title: '경동(클론코딩)',
         subtitle: 'Personal Project',
@@ -270,7 +299,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 10,
+        id: 11,
         ctgr: 'Team Project',
         title: 'SRT',
         subtitle: 'Team Project',
@@ -295,7 +324,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 11,
+        id: 12,
         ctgr: 'Personal Project',
         title: 'Express-Redux',
         subtitle: 'Personal Project',
