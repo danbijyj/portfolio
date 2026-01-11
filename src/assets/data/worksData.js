@@ -52,6 +52,7 @@ export const worksData = [
             'Redux Toolkit',
             'Axios',
             'Styled-Components',
+            'React Masonry CSS',
             'Swiper',
             'Vercel',
         ],
@@ -94,7 +95,7 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: 'React를 기반으로 아웃백 스테이크하우스 웹사이트를 구축한 프론트엔드 프로젝트입니다. React Router를 활용해 페이지 라우팅과 동적 라우팅 구조를 설계했으며, Pixabay REST API를 연동해 이미지 검색 기반 갤러리 기능을 구현했습니다. JSON 데이터 기반 게시판과 페이지네이션을 통해 데이터 흐름을 분리해 관리했고, styled-components로 전역 스타일을 모듈화하고 슬라이더·인터랙션 로직을 직접 조정해 UX를 최적화했습니다.',
+        desc: 'React를 기반으로 아웃백 스테이크하우스 웹사이트를 구축한 프론트엔드 프로젝트입니다. React Router를 활용해 페이지 라우팅과 동적 라우팅 구조를 설계했으며, Pixabay REST API를 연동해 이미지 검색 기반 갤러리 기능을 구현했습니다. JSON 데이터 기반 게시판과 페이지네이션을 통해 데이터 흐름을 분리해 관리했고, styled-components로 전역 스타일을 모듈화하고 슬라이더/인터랙션 로직을 직접 조정해 UX를 최적화했습니다.',
         details: {
             structure: '메인, 소개, 갤러리, 메뉴, 게시판',
             ratio: '디자인 100%, 코딩 100%',
