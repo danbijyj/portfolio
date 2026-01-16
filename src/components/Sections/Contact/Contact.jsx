@@ -81,7 +81,7 @@ const Contact = () => {
                 <div className="copy">
                     <p className="thanks">Thanks for visiting</p>
                     <p className="copyright">
-                        ⓒ2025 JANGYOOJUNG. All Rights Reserved.
+                        ⓒ Jang Yoo Jung. All rights reserved.
                     </p>
                 </div>
                 <div className="left">
