@@ -138,13 +138,17 @@
             a {
                 width: 140px;
                 height: 40px;
-                display: inline-block;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                appearance: none;
+                -webkit-appearance: none;
                 background-color: $blue;
                 color: $white;
                 transition: all 0.2s ease;
                 font-family: $font-en;
-                text-align: center;
-                align-content: center;
+                font-size: inherit;
+                line-height: 1;
                 &:hover {
                     background-color: lighten($blue, 5%);
                     transform: translateY(-2px);
