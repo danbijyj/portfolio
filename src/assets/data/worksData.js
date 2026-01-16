@@ -9,7 +9,7 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: '공공데이터 RESTful API를 활용해 경기도 공공 도서관 정보를 조회하는 웹 애플리케이션을 구현했습니다. API 응답 데이터를 원본 상태로 관리하고, 검색어/지역 필터링/정렬/더보기 페이지네이션을 클라이언트 파생 상태로 분리해 처리했습니다. 검색 입력에는 debounce를 적용해 불필요한 렌더링을 줄이고 UX를 개선했으며, API 키를 환경변수로 관리해 코드에 직접 노출되지 않도록 했습니다. 데이터 흐름과 사용자 경험을 함께 고려한 구조 설계를 통해 실제 서비스에 가까운 REST API 활용 경험을 쌓았습니다.',
+        desc: '공공데이터 REST API를 활용해 경기도 공공 도서관 정보를 조회하는 웹 애플리케이션을 구현했습니다. API 응답 데이터를 원본 상태로 관리하고 검색어, 지역 필터링, 정렬, 더보기 페이지네이션을 클라이언트 파생 상태로 분리해 처리했습니다. 검색 입력에는 debounce를 적용해 불필요한 렌더링을 줄여 UX를 개선했으며, API 키를 환경변수로 관리해 코드에 직접 노출되지 않도록 했습니다. 데이터 흐름과 사용자 경험을 함께 고려한 구조 설계를 통해 외부 REST API를 실무에 가깝게 활용한 경험을 쌓았습니다.',
         details: {
             structure: '히어로, 검색창, 도서관 리스트 등으로 구성된 원페이지',
             ratio: '디자인 100%, 코딩 100%',
@@ -26,7 +26,7 @@ export const worksData = [
             github: 'https://github.com/danbijyj/library',
             site: 'https://jyj-library.vercel.app/',
         },
-        responsive: false,
+        responsive: true,
     },
     {
         id: 2,
