@@ -29,13 +29,13 @@
             }
             .contents {
                 display: flex;
-                align-items: center;
+                align-items: end;
                 justify-content: space-between;
                 margin-top: 70px;
                 position: relative;
                 .box_wrap {
                     position: relative;
-                    width: 600px;
+                    width: 800px;
                     height: 380px;
                     .box {
                         position: absolute;
@@ -59,12 +59,12 @@
                             width: 100%;
                             height: 1px;
                             background: $black;
-                            margin: 15px 0 35px;
+                            margin: 15px 0 30px;
                         }
                         .icon_grid {
                             display: flex;
                             flex-wrap: wrap;
-                            gap: 30px;
+                            gap: 20px 48px;
                             .icon_item {
                                 width: 80px;
                                 display: flex;
@@ -94,7 +94,6 @@
                         }
                         &.others_box {
                             display: flex;
-                            justify-content: space-between;
                             flex-wrap: wrap;
                             gap: 16px 30px;
                             .group {
@@ -117,11 +116,13 @@
                         @include font-style(
                             $size: $fz-36,
                             $weight: $fw-300,
-                            $color: $grey
+                            $color: $grey7
                         );
                         line-height: 1.8;
                         cursor: pointer;
-                        transition: color 0.3s ease, border 0.3s ease;
+                        transition:
+                            color 0.3s ease,
+                            border 0.3s ease;
                     }
                     .active {
                         @include font-style(
@@ -136,7 +137,7 @@
                 .progress-bar {
                     position: absolute;
                     top: 50%;
-                    left: 55%;
+                    left: 70%;
                     transform: translate(-55%, -50%);
                     width: 3px;
                     height: 100%;
@@ -156,33 +157,33 @@
             }
         }
     }
-    .skills_line {
-        @include font-style($size: $fz-20, $weight: $fw-100, $color: $blue);
-        height: 60px;
-        overflow: hidden;
-        background-color: #e9f0fa;
-        position: relative;
-        margin-top: auto;
+}
+.skills_line {
+    @include font-style($size: $fz-20, $weight: $fw-100, $color: $blue);
+    height: 60px;
+    overflow: hidden;
+    background-color: #e9f0fa;
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    div {
         display: flex;
-        align-items: center;
-        div {
-            display: flex;
-            width: max-content;
-            animation: skills_line 120s linear infinite;
-            span {
-                display: inline-block;
-                white-space: nowrap;
-                letter-spacing: 20px;
-            }
+        width: max-content;
+        animation: skills_line 120s linear infinite;
+        span {
+            display: inline-block;
+            white-space: nowrap;
+            letter-spacing: 20px;
         }
     }
-    @keyframes skills_line {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
+}
+@keyframes skills_line {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }
 
@@ -203,8 +204,12 @@
                     }
                     .box_wrap {
                         width: 100%;
-                        max-width: 600px;
                         margin: 0 auto;
+                        .box {
+                            .icon_grid {
+                                gap: 20px 25px;
+                            }
+                        }
                     }
                     .list_wrap {
                         text-align: center;
@@ -235,9 +240,9 @@
                 }
             }
         }
-        .skills_line {
-            font-size: 18px;
-        }
+    }
+    .skills_line {
+        font-size: 18px;
     }
 }
 
@@ -302,9 +307,9 @@
                 }
             }
         }
-        .skills_line {
-            font-size: 16px;
-            height: 50px;
-        }
+    }
+    .skills_line {
+        font-size: 16px;
+        height: 50px;
     }
 }

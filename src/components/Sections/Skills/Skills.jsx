@@ -9,16 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [isMobile, setIsMobile] = useState(false);
     const boxRefs = useRef([]);
     const progressRef = useRef(null);
-
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 1200);
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     useEffect(() => {
         const boxes = boxRefs.current;
@@ -40,7 +32,7 @@ const Skills = () => {
                 opacity: 1,
                 top: '12%',
                 duration: 3,
-            }
+            },
         );
 
         gsap.set(boxes, { opacity: 0, position: 'absolute', top: 0, left: 0 });
@@ -101,86 +93,81 @@ const Skills = () => {
     };
 
     return (
-        <section id="skills" className="skills">
-            <span className="circle"></span>
-            <div className="inner">
-                <div className="skill_wrap">
-                    <h2>Skills</h2>
-                    <div className="contents sticky">
-                        <div className="col">
-                            <div className="box_wrap">
-                                {skillsData.map((skill, i) => (
-                                    <SkillBox
-                                        key={i}
-                                        data={skill}
-                                        ref={(el) => (boxRefs.current[i] = el)}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="list_wrap">
-                                <div
-                                    className={`list ${
-                                        activeIndex === 0 ? 'active' : ''
-                                    }`}
-                                    onClick={() => handleListClick(0)}
-                                >
-                                    Design
-                                </div>
-                                <div
-                                    className={`list ${
-                                        activeIndex === 1 ? 'active' : ''
-                                    }`}
-                                    onClick={() => handleListClick(1)}
-                                >
-                                    Frontend
-                                </div>
-                                <div
-                                    className={`list ${
-                                        activeIndex === 2 ? 'active' : ''
-                                    }`}
-                                    onClick={() => handleListClick(2)}
-                                >
-                                    {isMobile ? (
-                                        'Others'
-                                    ) : (
-                                        <>
-                                            Backend
-                                            <br />
-                                            Server/Deploy
-                                            <br />
-                                            Collaboration
-                                            <br />
-                                            AI
-                                        </>
-                                    )}
+        <>
+            <section id="skills" className="skills">
+                <span className="circle"></span>
+                <div className="inner">
+                    <div className="skill_wrap">
+                        <h2>Skills</h2>
+                        <div className="contents sticky">
+                            <div className="col">
+                                <div className="box_wrap">
+                                    {skillsData.map((skill, i) => (
+                                        <SkillBox
+                                            key={i}
+                                            data={skill}
+                                            ref={(el) =>
+                                                (boxRefs.current[i] = el)
+                                            }
+                                        />
+                                    ))}
                                 </div>
                             </div>
-                        </div>
-                        <div className="progress-bar">
-                            <div className="progress" ref={progressRef}></div>
+                            <div className="col">
+                                <div className="list_wrap">
+                                    <div
+                                        className={`list ${
+                                            activeIndex === 0 ? 'active' : ''
+                                        }`}
+                                        onClick={() => handleListClick(0)}
+                                    >
+                                        Design
+                                    </div>
+                                    <div
+                                        className={`list ${
+                                            activeIndex === 1 ? 'active' : ''
+                                        }`}
+                                        onClick={() => handleListClick(1)}
+                                    >
+                                        Frontend
+                                    </div>
+                                    <div
+                                        className={`list ${
+                                            activeIndex === 2 ? 'active' : ''
+                                        }`}
+                                        onClick={() => handleListClick(2)}
+                                    >
+                                        Others
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="progress-bar">
+                                <div
+                                    className="progress"
+                                    ref={progressRef}
+                                ></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <div className="skills_line">
                 <div>
                     <span>
-                        Figma Photoshop Illustrator HTML CSS SCSS Javascript
-                        React React-Router Redux Zustand Styled-components GSAP
-                        Express.js Node.js AWS Github Notion ChatGPT Claude
-                        Vercel Vite Etc.&nbsp;
+                        Figma Photoshop HTML CSS SCSS Styled-components
+                        Tailwind-CSS Javascript React React-Router Redux-Toolkit
+                        Zustand GSAP Github Notion ChatGPT Claude Gemini Vercel
+                        Vite Etc.&nbsp;
                     </span>
                     <span>
-                        Figma Photoshop Illustrator HTML CSS SCSS Javascript
-                        React React-Router Redux Zustand Styled-components GSAP
-                        Express.js Node.js AWS Github Notion ChatGPT Claude
-                        Vercel Vite Etc.&nbsp;
+                        Figma Photoshop HTML CSS SCSS Styled-components
+                        Tailwind-CSS Javascript React React-Router Redux-Toolkit
+                        Zustand GSAP Github Notion ChatGPT Claude Gemini Vercel
+                        Vite Etc.&nbsp;
                     </span>
                 </div>
             </div>
-        </section>
+        </>
     );
 };
 
