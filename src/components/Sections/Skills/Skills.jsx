@@ -93,64 +93,57 @@ const Skills = () => {
     };
 
     return (
-        <>
-            <section id="skills" className="skills">
-                <span className="circle"></span>
-                <div className="inner">
-                    <div className="skill_wrap">
-                        <h2>Skills</h2>
-                        <div className="contents sticky">
-                            <div className="col">
-                                <div className="box_wrap">
-                                    {skillsData.map((skill, i) => (
-                                        <SkillBox
-                                            key={i}
-                                            data={skill}
-                                            ref={(el) =>
-                                                (boxRefs.current[i] = el)
-                                            }
-                                        />
-                                    ))}
-                                </div>
+        <section id="skills" className="skills">
+            <span className="circle"></span>
+            <div className="inner">
+                <div className="skill_wrap">
+                    <h2>Skills</h2>
+                    <div className="contents sticky">
+                        <div className="col">
+                            <div className="box_wrap">
+                                {skillsData.map((skill, i) => (
+                                    <SkillBox
+                                        key={i}
+                                        data={skill}
+                                        ref={(el) => (boxRefs.current[i] = el)}
+                                    />
+                                ))}
                             </div>
-                            <div className="col">
-                                <div className="list_wrap">
-                                    <div
-                                        className={`list ${
-                                            activeIndex === 0 ? 'active' : ''
-                                        }`}
-                                        onClick={() => handleListClick(0)}
-                                    >
-                                        Design
-                                    </div>
-                                    <div
-                                        className={`list ${
-                                            activeIndex === 1 ? 'active' : ''
-                                        }`}
-                                        onClick={() => handleListClick(1)}
-                                    >
-                                        Frontend
-                                    </div>
-                                    <div
-                                        className={`list ${
-                                            activeIndex === 2 ? 'active' : ''
-                                        }`}
-                                        onClick={() => handleListClick(2)}
-                                    >
-                                        Others
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="progress-bar">
+                        </div>
+                        <div className="col">
+                            <div className="list_wrap">
                                 <div
-                                    className="progress"
-                                    ref={progressRef}
-                                ></div>
+                                    className={`list ${
+                                        activeIndex === 0 ? 'active' : ''
+                                    }`}
+                                    onClick={() => handleListClick(0)}
+                                >
+                                    Design
+                                </div>
+                                <div
+                                    className={`list ${
+                                        activeIndex === 1 ? 'active' : ''
+                                    }`}
+                                    onClick={() => handleListClick(1)}
+                                >
+                                    Frontend
+                                </div>
+                                <div
+                                    className={`list ${
+                                        activeIndex === 2 ? 'active' : ''
+                                    }`}
+                                    onClick={() => handleListClick(2)}
+                                >
+                                    Others
+                                </div>
                             </div>
+                        </div>
+                        <div className="progress-bar">
+                            <div className="progress" ref={progressRef}></div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <div className="skills_line">
                 <div>
                     <span>
@@ -167,7 +160,7 @@ const Skills = () => {
                     </span>
                 </div>
             </div>
-        </>
+        </section>
     );
 };
 

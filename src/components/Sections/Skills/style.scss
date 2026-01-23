@@ -6,6 +6,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    min-height: 100vh;
     .circle {
         position: absolute;
         top: 0;
@@ -19,7 +21,7 @@
     }
     .inner {
         flex: 1;
-        padding-bottom: 140px;
+        // padding-bottom: 140px;
         .skill_wrap {
             z-index: 2;
             position: relative;
@@ -157,33 +159,36 @@
             }
         }
     }
-}
-.skills_line {
-    @include font-style($size: $fz-20, $weight: $fw-100, $color: $blue);
-    height: 60px;
-    overflow: hidden;
-    background-color: #e9f0fa;
-    position: relative;
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    div {
+    .skills_line {
+        @include font-style($size: $fz-20, $weight: $fw-100, $color: $blue);
+        height: 60px;
+        overflow: hidden;
+        background-color: #e9f0fa;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-top: auto;
         display: flex;
-        width: max-content;
-        animation: skills_line 120s linear infinite;
-        span {
-            display: inline-block;
-            white-space: nowrap;
-            letter-spacing: 20px;
+        align-items: center;
+        div {
+            display: flex;
+            width: max-content;
+            animation: skills_line 120s linear infinite;
+            span {
+                display: inline-block;
+                white-space: nowrap;
+                letter-spacing: 20px;
+            }
         }
     }
-}
-@keyframes skills_line {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
+    @keyframes skills_line {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
     }
 }
 
@@ -240,9 +245,9 @@
                 }
             }
         }
-    }
-    .skills_line {
-        font-size: 18px;
+        .skills_line {
+            font-size: 18px;
+        }
     }
 }
 
@@ -307,9 +312,9 @@
                 }
             }
         }
-    }
-    .skills_line {
-        font-size: 16px;
-        height: 50px;
+        .skills_line {
+            font-size: 16px;
+            height: 50px;
+        }
     }
 }
