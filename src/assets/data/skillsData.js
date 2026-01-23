@@ -21,8 +21,8 @@ export const skillsData = [
             { name: 'React Router', icon: '/images/icon_09.png' },
             { name: 'Redux Toolkit', icon: '/images/icon_10.png' },
             { name: 'Zustand', icon: '/images/icon_11.png' },
-            { name: 'REST API', icon: '/images/icon_26.png' },
             { name: 'GSAP', icon: '/images/icon_13.png' },
+            { name: 'REST API', icon: '/images/icon_26.png' },
         ],
     },
     {
