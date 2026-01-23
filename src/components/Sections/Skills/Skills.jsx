@@ -43,7 +43,7 @@ const Skills = () => {
         ScrollTrigger.create({
             trigger: '.skills',
             start: 'top top',
-            end: '+=820',
+            end: '+=600',
             scrub: 0.5,
             pin: true,
             onUpdate: (self) => {

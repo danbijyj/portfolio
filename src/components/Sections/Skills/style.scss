@@ -6,8 +6,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    min-height: 100vh;
     .circle {
         position: absolute;
         top: 0;
@@ -21,7 +19,7 @@
     }
     .inner {
         flex: 1;
-        // padding-bottom: 140px;
+        padding-bottom: 210px;
         .skill_wrap {
             z-index: 2;
             position: relative;
@@ -164,11 +162,10 @@
         height: 60px;
         overflow: hidden;
         background-color: #e9f0fa;
+        width: 100%;
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
-        margin-top: auto;
         display: flex;
         align-items: center;
         div {
