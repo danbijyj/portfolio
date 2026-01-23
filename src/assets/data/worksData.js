@@ -183,7 +183,7 @@ export const worksData = [
             plan: 'https://www.figma.com/deck/NoKx4E58eUBprzkGeOZRVJ/%EC%82%AC%EC%9A%B4%EC%A6%88%EA%B5%BF%EC%A6%88-%EA%B8%B0%ED%9A%8D%EC%84%9C-ppt-%EC%A0%9C%EC%B6%9C%EC%9A%A9?node-id=35-102&viewport=-159%2C-143%2C0.73&t=7QmDeqLdcnYVKIly-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
             docu: 'https://www.figma.com/proto/R5xqSHRsA8xRjL8wsqCqbp/%EC%82%AC%EC%9A%B4%EC%A6%88%EA%B5%BF%EC%A6%88-%EA%B5%BF%ED%94%BC%ED%94%8C%EC%A6%88?page-id=136%3A334&node-id=2585-1572&viewport=-27%2C-1229%2C0.04&t=UPhNnYuju83wBj1t-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2516%3A17038&show-proto-sidebar=1',
             github: 'https://github.com/danbijyj/soundsgoods',
-            site: 'https://goodsounds.vercel.app/',
+            site: 'https://soundsgoods.vercel.app/',
         },
         responsive: true,
     },
