@@ -27,7 +27,7 @@ export const worksData = [
             github: 'https://github.com/danbijyj/pharmacy',
             site: 'https://jyj-pharmacy.vercel.app/',
         },
-        responsive: false,
+        responsive: true,
     },
     {
         id: 2,
