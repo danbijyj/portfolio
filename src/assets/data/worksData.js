@@ -2,7 +2,7 @@ export const worksData = [
     {
         id: 1,
         ctgr: 'Personal Project',
-        title: '인천광역시 영업중 약국 찾기',
+        title: '인천광역시 영업중 약국',
         subtitle: 'Personal Project',
         tag: ['personal'],
         img: '/images/works_13.png',
