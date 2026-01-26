@@ -2,6 +2,36 @@ export const worksData = [
     {
         id: 1,
         ctgr: 'Personal Project',
+        title: '인천광역시 영업중 약국 찾기',
+        subtitle: 'Personal Project',
+        tag: ['personal'],
+        img: '/images/works_13.png',
+        skill1: 'Design',
+        skill2: 'React',
+        type: 'personal',
+        desc: '공공데이터 REST API를 활용해 인천광역시 구/군별 약국 정보를 조회하는 웹 애플리케이션을 구현했습니다. 영업 시간 데이터를 영업중, 곧 영업종료, 영업종료 상태로 실시간 계산하고 UI에 반영했으며, 상태 필터와 더보기 페이지네이션을 통해 대용량 데이터를 효율적으로 탐색할 수 있도록 설계했습니다. 지도 검색은 주소와 약국명을 결합해 검색 정확도를 개선했으며, 영업 종료 시 전화 버튼 비활성화 등 상태 기반 UX를 적용해 실제 서비스에 가까운 사용자 경험을 구현했습니다.',
+        details: {
+            structure:
+                '히어로, 지역 선택, 상태 필터, 약국 리스트, 더보기 버튼으로 구성된 원페이지',
+            ratio: '디자인 100%, 코딩 100%',
+        },
+        tags: [
+            'Figma',
+            'React',
+            'JavaScript',
+            'Public REST API',
+            'Tailwind CSS',
+            'Vercel',
+        ],
+        links: {
+            github: 'https://github.com/danbijyj/pharmacy',
+            site: 'https://jyj-pharmacy.vercel.app/',
+        },
+        responsive: false,
+    },
+    {
+        id: 2,
+        ctgr: 'Personal Project',
         title: '경기도 공공 도서관 찾기',
         subtitle: 'Personal Project',
         tag: ['personal'],
@@ -29,7 +59,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 2,
+        id: 3,
         ctgr: 'Personal Project',
         title: '에스더버니 미니샵',
         subtitle: 'Personal Project',
@@ -63,7 +93,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 3,
+        id: 4,
         ctgr: 'Personal Project',
         title: '개인 포트폴리오',
         subtitle: 'Personal Project',
@@ -86,7 +116,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 4,
+        id: 5,
         ctgr: 'Personal Project',
         title: '아웃백스테이크하우스',
         subtitle: 'Personal Project',
@@ -120,7 +150,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 5,
+        id: 6,
         ctgr: 'Personal Project',
         title: '헤라',
         subtitle: 'Personal Project',
@@ -151,7 +181,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 6,
+        id: 7,
         ctgr: 'Team Project',
         title: 'SoundsGoods',
         subtitle: 'Team Project',
@@ -188,7 +218,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 7,
+        id: 8,
         ctgr: 'Team Project',
         title: '현대식품관 투홈',
         subtitle: 'Team Project',
@@ -227,7 +257,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 8,
+        id: 9,
         ctgr: 'Personal Project',
         title: '서울시청',
         subtitle: 'Personal Project',
@@ -257,7 +287,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 9,
+        id: 10,
         ctgr: 'Personal Project',
         title: '웰컴복지재단',
         subtitle: 'Personal Project',
@@ -279,7 +309,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 10,
+        id: 11,
         ctgr: 'Personal Project',
         title: '경동(클론코딩)',
         subtitle: 'Personal Project',
@@ -301,7 +331,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 11,
+        id: 12,
         ctgr: 'Team Project',
         title: 'SRT',
         subtitle: 'Team Project',
@@ -326,7 +356,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 12,
+        id: 13,
         ctgr: 'Personal Project',
         title: 'Express-Redux',
         subtitle: 'Personal Project',
