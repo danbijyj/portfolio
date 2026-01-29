@@ -13,11 +13,11 @@ const NavBar = ({ startAnimation }) => {
         if (!startAnimation) return;
         if (!navRef.current) return;
 
-        gsap.fromTo(
-            navRef.current,
-            { y: -navRef.current.offsetHeight },
-            { y: 0, duration: 0.6, ease: 'power2.out' },
-        );
+        gsap.to(navRef.current, {
+            y: 0,
+            duration: 0.6,
+            ease: 'power2.out',
+        });
     }, [startAnimation]);
 
     const handleScrollTo = useCallback((targetId) => {

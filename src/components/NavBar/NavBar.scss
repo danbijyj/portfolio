@@ -1,16 +1,13 @@
 @use '../../scss/global.scss' as *;
 
-:root {
-    --nav-height: 70px;
-}
 .nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    height: var(--nav-height);
-    transform: translateY(calc(var(--nav-height) * -1));
+    height: 70px;
+    transform: translateY(-70px);
     display: flex;
     background: rgba($white, 0.5);
     backdrop-filter: blur(8px);
@@ -90,9 +87,6 @@
 }
 
 @media (max-width: $breakpoint-tablet) {
-    :root {
-        --nav-height: 56px;
-    }
     .nav {
         .line {
             display: none;
@@ -108,11 +102,8 @@
                 width: auto;
                 padding-left: 0;
                 a {
-                    p {
-                        font-size: 10px;
-                    }
                     h1 {
-                        @include font-style($size: $fz-14, $weight: $fw-600);
+                        @include font-style($weight: $fw-600);
                         margin-bottom: 0;
                     }
                 }
@@ -143,7 +134,7 @@
             }
             .menu {
                 position: absolute;
-                top: 56px;
+                top: 70px;
                 left: 0;
                 width: 100%;
                 background: rgba($white, 0.9);
@@ -174,34 +165,10 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-    :root {
-        --nav-height: 48px;
-    }
     .nav {
         .inner {
             padding: 0 20px;
-            .logo {
-                a {
-                    p {
-                        margin-bottom: 1px;
-                    }
-                    h1 {
-                        @include font-style($size: $fz-13, $weight: $fw-600);
-                    }
-                }
-            }
-            .hamburger {
-                width: 22px;
-                height: 16px;
-                &.active span:nth-child(1) {
-                    transform: translateY(5px) rotate(45deg);
-                }
-                &.active span:nth-child(3) {
-                    transform: translateY(-9px) rotate(-45deg);
-                }
-            }
             .menu {
-                top: 48px;
                 ul {
                     padding: 10px 20px;
                 }
