@@ -30,19 +30,19 @@ export const skillsData = [
         category: 'Others',
         groups: [
             {
-                title: 'Collaboration',
-                items: [
-                    { name: 'GitHub', icon: '/images/icon_17.png' },
-                    { name: 'Notion', icon: '/images/icon_18.png' },
-                ],
-            },
-            {
                 title: 'AI Tools',
                 items: [
                     { name: 'ChatGPT', icon: '/images/icon_19.png' },
                     { name: 'Claude', icon: '/images/icon_20.png' },
                     { name: 'Gemini', icon: '/images/icon_25.png' },
                     { name: 'etc.', icon: '/images/icon_23.png' },
+                ],
+            },
+            {
+                title: 'Collaboration',
+                items: [
+                    { name: 'GitHub', icon: '/images/icon_17.png' },
+                    { name: 'Notion', icon: '/images/icon_18.png' },
                 ],
             },
             {
