@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import gsap from 'gsap';
 import './TopButton.scss';
 import { SlArrowUp } from 'react-icons/sl';
 
@@ -28,16 +27,23 @@ const TopButton = ({ isLoaded }) => {
     }, []);
 
     const scrollToTop = () => {
-        gsap.to(window, { scrollTo: 0, duration: 0.5, ease: 'power2.out' });
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
     };
 
     if (isModalOpen) return null;
 
     return (
-        <SlArrowUp
+        <button
             className={`top ${visible && isLoaded ? 'visible' : ''}`}
             onClick={scrollToTop}
-        />
+            aria-label="Scroll to top"
+            type="button"
+        >
+            <SlArrowUp />
+        </button>
     );
 };
 

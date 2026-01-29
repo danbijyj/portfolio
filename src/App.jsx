@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState } from 'react';
 
 import Loader from './components/Loader/Loader';
 import NavBar from './components/NavBar/NavBar';
@@ -14,8 +12,6 @@ import Contact from './components/Sections/Contact/Contact';
 
 import './scss/global.scss';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const App = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
@@ -23,13 +19,7 @@ const App = () => {
         <>
             {!isLoaded && <Loader onComplete={() => setIsLoaded(true)} />}
             <NavBar startAnimation={isLoaded} />
-            <div
-                id="wrap"
-                style={{
-                    opacity: isLoaded ? 1 : 0,
-                    transition: 'opacity 0.5s ease',
-                }}
-            >
+            <div id="wrap" className={isLoaded ? 'is-loaded' : ''}>
                 <Hero startAnimation={isLoaded} />
                 <AboutMe />
                 <Skills />
