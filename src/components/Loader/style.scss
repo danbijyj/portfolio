@@ -48,9 +48,7 @@
             white-space: nowrap;
             @include font-style($size: 10vw, $weight: $fw-100, $color: $white);
             .marquee_container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center;
             }
         }
     }
@@ -70,9 +68,7 @@
             white-space: nowrap;
             @include font-style($size: 10vw, $weight: $fw-900, $color: $blue);
             .marquee_container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center;
             }
         }
     }

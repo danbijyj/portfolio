@@ -26,11 +26,11 @@ const Works = () => {
         let active = 70;
         let inactive = 50;
         if (width <= 480) {
+            active = 36;
+            inactive = 24;
+        } else if (width <= 768) {
             active = 48;
             inactive = 28;
-        } else if (width <= 768) {
-            active = 50;
-            inactive = 32;
         }
         return isActive ? `${active}px` : `${inactive}px`;
     };
@@ -102,7 +102,7 @@ const Works = () => {
                         duration: 0.2,
                         ease: 'power2.out',
                         delay: 0.1,
-                    }
+                    },
                 );
             },
         });

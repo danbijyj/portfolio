@@ -27,15 +27,13 @@
         }
     }
     .inner {
-        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-left: 1px solid #000;
         position: relative;
         box-sizing: border-box;
-        width: 100%;
-        max-width: 1200px;
+        @include container;
         .logo_line {
             position: absolute;
             top: 0;

@@ -149,14 +149,14 @@ const Skills = () => {
                     <span>
                         Figma Photoshop HTML CSS SCSS Styled-components
                         Tailwind-CSS Javascript React React-Router Redux-Toolkit
-                        Zustand GSAP Github Notion ChatGPT Claude Gemini Vercel
-                        Vite Etc.&nbsp;
+                        Zustand GSAP RESTAPI Github Notion ChatGPT Claude Gemini
+                        Vercel Vite Etc.&nbsp;
                     </span>
                     <span>
                         Figma Photoshop HTML CSS SCSS Styled-components
                         Tailwind-CSS Javascript React React-Router Redux-Toolkit
-                        Zustand GSAP Github Notion ChatGPT Claude Gemini Vercel
-                        Vite Etc.&nbsp;
+                        Zustand GSAP RESTAPI Github Notion ChatGPT Claude Gemini
+                        Vercel Vite Etc.&nbsp;
                     </span>
                 </div>
             </div>
