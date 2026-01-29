@@ -1,12 +1,14 @@
 @use '../../scss/global.scss' as *;
 
+:root {
+    --nav-height: 70px;
+}
 .nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    --nav-height: 70px;
     height: var(--nav-height);
     transform: translateY(calc(var(--nav-height) * -1));
     display: flex;
@@ -88,8 +90,10 @@
 }
 
 @media (max-width: $breakpoint-tablet) {
-    .nav {
+    :root {
         --nav-height: 56px;
+    }
+    .nav {
         .line {
             display: none;
         }
@@ -170,8 +174,10 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-    .nav {
+    :root {
         --nav-height: 48px;
+    }
+    .nav {
         .inner {
             padding: 0 20px;
             .logo {
