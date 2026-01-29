@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { items } from '../../../assets/data/worksviewData.js';
+import { items } from '../../../assets/data/worksViewData.js';
 import './WorksView.scss';
 
 gsap.registerPlugin(ScrollToPlugin);
