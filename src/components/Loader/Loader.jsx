@@ -53,15 +53,15 @@ const Loader = ({ onComplete }) => {
 
             setStartX();
 
-            tl.to('.clip_top', { height: '33.3vh', duration: 1.5 })
-                .to('.clip_center', { height: '33.3vh', duration: 1.5 }, '<')
-                .to('.clip_bottom', { height: '33.3vh', duration: 1.5 }, '<')
+            tl.to('.clip_top', { height: '33.3vh', duration: 1.2 })
+                .to('.clip_center', { height: '33.3vh', duration: 1.2 }, '<')
+                .to('.clip_bottom', { height: '33.3vh', duration: 1.2 }, '<')
 
-                .to('.clip_top .marquee', { x: 0, duration: 2 }, '-=0.5')
-                .to('.clip_center .marquee', { x: 0, duration: 2 }, '<')
-                .to('.clip_bottom .marquee', { x: 0, duration: 2 }, '<')
+                .to('.clip_top .marquee', { x: 0, duration: 1.3 }, '-=0.5')
+                .to('.clip_center .marquee', { x: 0, duration: 1.3 }, '<')
+                .to('.clip_bottom .marquee', { x: 0, duration: 1.3 }, '<')
 
-                .to('.loader', { opacity: 0, duration: 1.5, delay: 1 });
+                .to('.loader', { opacity: 0, duration: 1.2, delay: 1 });
         };
 
         runAnimation();
