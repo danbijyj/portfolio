@@ -13,7 +13,7 @@ const Loader = ({ onComplete }) => {
     ];
 
     const renderSpans = (text) =>
-        [...Array(repeatCount)].map((_, i) => (
+        Array.from({ length: repeatCount }).map((_, i) => (
             <span key={i}>{text}&nbsp;</span>
         ));
 
@@ -25,8 +25,7 @@ const Loader = ({ onComplete }) => {
             const els = gsap.utils.toArray(
                 loaderEl.querySelectorAll('.marquee'),
             );
-            const widths = els.map((el) => el.scrollWidth);
-            const maxWidth = Math.max(...widths);
+            const maxWidth = Math.max(...els.map((el) => el.scrollWidth));
             els.forEach((el) => {
                 el.style.width = `${maxWidth}px`;
             });
@@ -34,7 +33,6 @@ const Loader = ({ onComplete }) => {
 
         const ctx = gsap.context(() => {
             loaderEl.classList.add('ready');
-            gsap.set(loaderEl, { opacity: 1 });
 
             const tl = gsap.timeline({
                 defaults: { ease: 'power4.inOut' },
@@ -60,14 +58,10 @@ const Loader = ({ onComplete }) => {
                 .to(loaderEl, { opacity: 0, duration: 0.5, delay: 1.5 });
         }, loaderRef);
 
-        const handleResize = () => {
-            normalizeWidths();
-        };
-
-        window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', normalizeWidths);
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', normalizeWidths);
             ctx.revert();
         };
     }, [onComplete]);
