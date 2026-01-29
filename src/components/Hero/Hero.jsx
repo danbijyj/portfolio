@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import gsap from 'gsap';
-import './style.scss';
+import './Hero.scss';
 
 const Hero = ({ startAnimation }) => {
     useEffect(() => {

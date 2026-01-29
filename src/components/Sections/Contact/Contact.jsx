@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import './style.scss';
+import './Contact.scss';
 
 const Contact = () => {
     const marqueeRef = useRef(null);

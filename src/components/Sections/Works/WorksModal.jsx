@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { worksData } from '../../../assets/data/worksData';
-import './styleModal.scss';
+import './WorksModal.scss';
 
 const WorksModal = ({ itemId, onClose }) => {
     const item = worksData.find((data) => data.id === itemId);

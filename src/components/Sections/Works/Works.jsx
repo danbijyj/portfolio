@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/all';
 import { worksData } from '../../../assets/data/worksData';
 import WorksModal from './WorksModal';
-import './style.scss';
+import './Works.scss';
 
 gsap.registerPlugin(ScrollToPlugin);
 

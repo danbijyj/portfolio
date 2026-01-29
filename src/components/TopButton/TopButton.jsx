@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
-import './style.scss';
+import './TopButton.scss';
 import { SlArrowUp } from 'react-icons/sl';
 
 const TopButton = ({ isLoaded }) => {

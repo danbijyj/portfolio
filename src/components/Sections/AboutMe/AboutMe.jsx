@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './style.scss';
+import './AboutMe.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,7 +24,7 @@ const AboutMe = () => {
                     start: 'top 30%',
                     toggleActions: 'restart none none reverse',
                 },
-            }
+            },
         );
     }, []);
 

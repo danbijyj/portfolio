@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import './style.scss';
+import './NavBar.scss';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -31,7 +31,7 @@ const NavBar = () => {
 
         return () => {
             links.forEach((link) =>
-                link.removeEventListener('click', handleClick)
+                link.removeEventListener('click', handleClick),
             );
         };
     }, []);

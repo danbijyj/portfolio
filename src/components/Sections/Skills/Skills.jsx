@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { skillsData } from '../../../assets/data/skillsData';
 import SkillBox from './SkillBox';
-import './style.scss';
+import './Skills.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 

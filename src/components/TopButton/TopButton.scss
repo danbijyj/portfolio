@@ -17,7 +17,9 @@
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.4s, background-color 0.3s;
+    transition:
+        opacity 0.4s,
+        background-color 0.3s;
     &.visible {
         opacity: 1;
         pointer-events: auto;

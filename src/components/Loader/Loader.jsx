@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import gsap from 'gsap';
-import './style.scss';
+import './Loader.scss';
 
 const Loader = ({ onComplete }) => {
     const repeatCount = 5;
