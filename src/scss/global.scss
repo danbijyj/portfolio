@@ -12,14 +12,14 @@ body {
     background-color: $white;
     color: $black;
     letter-spacing: -0.03em;
-    #wrap {
-        width: 100%;
-        .inner {
-            @include container;
-            h2 {
-                @include font-style($size: $fz-64, $weight: $fw-100);
-            }
-        }
+}
+#wrap {
+    width: 100%;
+}
+.inner {
+    @include container;
+    h2 {
+        @include font-style($size: $fz-64, $weight: $fw-100);
     }
 }
 

@@ -57,7 +57,7 @@ const Loader = ({ onComplete }) => {
                 .to('.clip_top .marquee', { x: '0%', duration: 1.5 }, '-=0.5')
                 .to('.clip_center .marquee', { x: '0%', duration: 1.5 }, '<')
                 .to('.clip_bottom .marquee', { x: '0%', duration: 1.5 }, '<')
-                .to(loaderEl, { opacity: 0, duration: 1, delay: 1.5 });
+                .to(loaderEl, { opacity: 0, duration: 0.5, delay: 1.5 });
         }, loaderRef);
 
         const handleResize = () => {
