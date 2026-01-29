@@ -29,34 +29,40 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: max-content;
+            transform: translate(-50%, -50%);
             display: flex;
             white-space: nowrap;
-            @include font-style($size: 10vw, $weight: $fw-100, $color: $white);
+            @include font-style($size: 10vw, $weight: $fw-900, $color: $blue);
             .marquee_container {
                 @include flex-center;
-                width: max-content;
+            }
+        }
+        &.clip_top,
+        &.clip_bottom {
+            background-color: $black;
+            .marquee {
+                @include font-style(
+                    $size: 10vw,
+                    $weight: $fw-100,
+                    $color: $white
+                );
             }
         }
         &.clip_top {
             top: 0;
-            background-color: $black;
+            .marquee {
+                left: 65vw;
+            }
         }
         &.clip_bottom {
             bottom: 0;
-            background-color: $black;
+            .marquee {
+                left: 110vw;
+            }
         }
         &.clip_center {
             top: var(--section-height);
-            background-color: $white;
             z-index: 100;
-            .marquee {
-                @include font-style(
-                    $size: 10vw,
-                    $weight: $fw-900,
-                    $color: $blue
-                );
-            }
         }
     }
 }

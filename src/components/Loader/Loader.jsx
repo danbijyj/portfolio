@@ -3,20 +3,23 @@ import gsap from 'gsap';
 import './style.scss';
 
 const Loader = ({ onComplete }) => {
+    const repeatCount = 5;
+
     const marquees = [
-        { className: 'clip_top', text: 'Hello World', repeat: 6 },
-        { className: 'clip_center', text: 'JANGYOOJUNG', repeat: 12 },
-        { className: 'clip_bottom', text: 'Portfolio', repeat: 6 },
+        { className: 'clip_top', text: 'Hello World' },
+        { className: 'clip_center', text: 'JANGYOOJUNG' },
+        { className: 'clip_bottom', text: 'Portfolio' },
     ];
 
-    const renderSpans = (text, count) =>
-        [...Array(count)].map((_, i) => <span key={i}>{text}&nbsp;</span>);
+    const renderSpans = (text) =>
+        [...Array(repeatCount)].map((_, i) => (
+            <span key={i}>{text}&nbsp;</span>
+        ));
 
     useEffect(() => {
         const loader = document.querySelector('.loader');
         loader.classList.add('ready');
         gsap.set(loader, { opacity: 1 });
-        gsap.set('.marquee', { xPercent: -50, yPercent: -50 });
 
         const tl = gsap.timeline({
             defaults: { ease: 'power4.inOut' },
@@ -27,47 +30,40 @@ const Loader = ({ onComplete }) => {
             },
         });
 
-        const setStartX = () => {
-            const top = document.querySelector('.clip_top .marquee');
-            const center = document.querySelector('.clip_center .marquee');
-            const bottom = document.querySelector('.clip_bottom .marquee');
-
-            if (!top || !center || !bottom) return;
-
-            const vw = window.innerWidth;
-
-            const offR = (el) => vw / 2 + el.offsetWidth / 2;
-            const offL = (el) => -(vw / 2 + el.offsetWidth / 2);
-
-            gsap.set(top, { x: offR(top) });
-            gsap.set(center, { x: offL(center) });
-            gsap.set(bottom, { x: offR(bottom) });
+        const normalizeWidths = () => {
+            const els = gsap.utils.toArray('.marquee');
+            const widths = els.map((el) => el.scrollWidth);
+            const maxWidth = Math.max(...widths);
+            els.forEach((el) => {
+                el.style.width = `${maxWidth}px`;
+            });
         };
 
         const runAnimation = () => {
             tl.clear();
+            normalizeWidths();
 
             gsap.set('.clip_top', { height: 0 });
-            gsap.set('.clip_center', { height: 0 });
             gsap.set('.clip_bottom', { height: 0 });
 
-            setStartX();
+            gsap.set('.clip_top .marquee', { x: '100%' });
+            gsap.set('.clip_center .marquee', { x: '-100%' });
+            gsap.set('.clip_bottom .marquee', { x: '100%' });
 
             tl.to('.clip_top', { height: '33.3vh', duration: 1.2 })
-                .to('.clip_center', { height: '33.3vh', duration: 1.2 }, '<')
                 .to('.clip_bottom', { height: '33.3vh', duration: 1.2 }, '<')
 
-                .to('.clip_top .marquee', { x: 0, duration: 1.3 }, '-=0.5')
-                .to('.clip_center .marquee', { x: 0, duration: 1.3 }, '<')
-                .to('.clip_bottom .marquee', { x: 0, duration: 1.3 }, '<')
-
-                .to('.loader', { opacity: 0, duration: 1.2, delay: 1 });
+                .to('.clip_top .marquee', { x: '0%', duration: 1.5 }, '-=0.5')
+                .to('.clip_center .marquee', { x: '0%', duration: 1.5 }, '<')
+                .to('.clip_bottom .marquee', { x: '0%', duration: 1.5 }, '<')
+                .to('.loader', { opacity: 0, duration: 1, delay: 1.5 });
         };
 
         runAnimation();
 
         const handleResize = () => {
-            setStartX();
+            gsap.set('.marquee', { clearProps: 'transform' });
+            runAnimation();
         };
 
         window.addEventListener('resize', handleResize);
@@ -83,7 +79,7 @@ const Loader = ({ onComplete }) => {
                 <section key={i} className={`loader_clip ${m.className}`}>
                     <div className="marquee">
                         <div className="marquee_container">
-                            {renderSpans(m.text, m.repeat)}
+                            {renderSpans(m.text)}
                         </div>
                     </div>
                 </section>
