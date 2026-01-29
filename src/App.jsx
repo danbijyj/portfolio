@@ -19,37 +19,10 @@ gsap.registerPlugin(ScrollTrigger);
 const App = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const handleLoaderComplete = () => {
-        setIsLoaded(true);
-        gsap.fromTo(
-            'nav',
-            { top: '-70px' },
-            { top: 0, duration: 0.6, ease: 'power3.out' },
-        );
-        ScrollTrigger.refresh();
-    };
-
-    useEffect(() => {
-        if (!isLoaded) return;
-        const nav = document.querySelector('nav');
-        if (nav) {
-            nav.style.position = 'fixed';
-            nav.style.top = '0';
-        }
-        const handleResize = () => {
-            if (nav) {
-                nav.style.position = 'fixed';
-                nav.style.top = '0';
-            }
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [isLoaded]);
-
     return (
         <>
-            {!isLoaded && <Loader onComplete={handleLoaderComplete} />}
-            <NavBar />
+            {!isLoaded && <Loader onComplete={() => setIsLoaded(true)} />}
+            <NavBar startAnimation={isLoaded} />
             <div
                 id="wrap"
                 style={{

@@ -1,12 +1,24 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import './NavBar.scss';
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const NavBar = () => {
+const NavBar = ({ startAnimation }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const navRef = useRef(null);
+
+    useEffect(() => {
+        if (!startAnimation) return;
+        if (!navRef.current) return;
+
+        gsap.to(navRef.current, {
+            y: 0,
+            duration: 0.6,
+            ease: 'power2.out',
+        });
+    }, [startAnimation]);
 
     const handleScrollTo = useCallback((targetId) => {
         const target = document.querySelector(targetId);
@@ -27,7 +39,7 @@ const NavBar = () => {
     };
 
     return (
-        <nav className="nav">
+        <nav className="nav" ref={navRef}>
             <div className="line left"></div>
             <div className="inner">
                 <div className="logo_line"></div>
