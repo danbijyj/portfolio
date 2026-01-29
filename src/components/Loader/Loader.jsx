@@ -1,14 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './Loader.scss';
 
 const Loader = ({ onComplete }) => {
+    const loaderRef = useRef(null);
     const repeatCount = 5;
 
     const marquees = [
-        { className: 'clip_top', text: 'Hello World' },
-        { className: 'clip_center', text: 'JANGYOOJUNG' },
-        { className: 'clip_bottom', text: 'Portfolio' },
+        { id: 'top', className: 'clip_top', text: 'Hello World' },
+        { id: 'center', className: 'clip_center', text: 'JANGYOOJUNG' },
+        { id: 'bottom', className: 'clip_bottom', text: 'Portfolio' },
     ];
 
     const renderSpans = (text) =>
@@ -17,21 +18,13 @@ const Loader = ({ onComplete }) => {
         ));
 
     useEffect(() => {
-        const loader = document.querySelector('.loader');
-        loader.classList.add('ready');
-        gsap.set(loader, { opacity: 1 });
-
-        const tl = gsap.timeline({
-            defaults: { ease: 'power4.inOut' },
-            onComplete: () => {
-                loader.style.display = 'none';
-                loader.style.pointerEvents = 'none';
-                if (onComplete) onComplete();
-            },
-        });
+        const loaderEl = loaderRef.current;
+        if (!loaderEl) return;
 
         const normalizeWidths = () => {
-            const els = gsap.utils.toArray('.marquee');
+            const els = gsap.utils.toArray(
+                loaderEl.querySelectorAll('.marquee'),
+            );
             const widths = els.map((el) => el.scrollWidth);
             const maxWidth = Math.max(...widths);
             els.forEach((el) => {
@@ -39,8 +32,17 @@ const Loader = ({ onComplete }) => {
             });
         };
 
-        const runAnimation = () => {
-            tl.clear();
+        const ctx = gsap.context(() => {
+            loaderEl.classList.add('ready');
+            gsap.set(loaderEl, { opacity: 1 });
+
+            const tl = gsap.timeline({
+                defaults: { ease: 'power4.inOut' },
+                onComplete: () => {
+                    onComplete?.();
+                },
+            });
+
             normalizeWidths();
 
             gsap.set('.clip_top', { height: 0 });
@@ -52,31 +54,28 @@ const Loader = ({ onComplete }) => {
 
             tl.to('.clip_top', { height: '33.3vh', duration: 1.2 })
                 .to('.clip_bottom', { height: '33.3vh', duration: 1.2 }, '<')
-
                 .to('.clip_top .marquee', { x: '0%', duration: 1.5 }, '-=0.5')
                 .to('.clip_center .marquee', { x: '0%', duration: 1.5 }, '<')
                 .to('.clip_bottom .marquee', { x: '0%', duration: 1.5 }, '<')
-                .to('.loader', { opacity: 0, duration: 1, delay: 1.5 });
-        };
-
-        runAnimation();
+                .to(loaderEl, { opacity: 0, duration: 1, delay: 1.5 });
+        }, loaderRef);
 
         const handleResize = () => {
-            gsap.set('.marquee', { clearProps: 'transform' });
-            runAnimation();
+            normalizeWidths();
         };
 
         window.addEventListener('resize', handleResize);
+
         return () => {
             window.removeEventListener('resize', handleResize);
-            tl.kill();
+            ctx.revert();
         };
     }, [onComplete]);
 
     return (
-        <div className="loader">
-            {marquees.map((m, i) => (
-                <section key={i} className={`loader_clip ${m.className}`}>
+        <div className="loader" ref={loaderRef}>
+            {marquees.map((m) => (
+                <section key={m.id} className={`loader_clip ${m.className}`}>
                     <div className="marquee">
                         <div className="marquee_container">
                             {renderSpans(m.text)}
