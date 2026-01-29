@@ -3,19 +3,15 @@
 .loader {
     --partials: 3;
     --section-height: calc(100vh / var(--partials));
+    position: fixed;
+    inset: 0;
     width: 100vw;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
     background: $white;
-    z-index: 100;
-    opacity: 0;
+    z-index: 1000;
     visibility: hidden;
     pointer-events: none;
-    transition: none;
     &.ready {
-        opacity: 1;
         visibility: visible;
         pointer-events: all;
     }
@@ -24,17 +20,18 @@
         width: 100vw;
         height: var(--section-height);
         overflow: hidden;
-        z-index: 1000;
+        z-index: 1;
         .marquee {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: flex;
+            align-items: center;
             white-space: nowrap;
             @include font-style($size: 10vw, $weight: $fw-900, $color: $blue);
             .marquee_container {
-                @include flex-center;
+                display: flex;
             }
         }
         &.clip_top,
@@ -54,15 +51,14 @@
                 left: 65vw;
             }
         }
+        &.clip_center {
+            top: var(--section-height);
+        }
         &.clip_bottom {
             bottom: 0;
             .marquee {
                 left: 110vw;
             }
-        }
-        &.clip_center {
-            top: var(--section-height);
-            z-index: 100;
         }
     }
 }

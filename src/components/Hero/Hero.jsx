@@ -1,40 +1,30 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './Hero.scss';
 
+const TITLE = 'Frontend Developer';
+
 const Hero = ({ startAnimation }) => {
-    useEffect(() => {
-        const h1 = document.querySelector('#hero .inner h1');
-        if (h1) {
-            gsap.set(h1, { opacity: 0 });
-        }
-    }, []);
+    const titleRef = useRef(null);
+
+    const splitText = (text) =>
+        text.split('').map((ch, i) => (
+            <span key={i} className="char">
+                {ch === ' ' ? '\u00A0' : ch}
+            </span>
+        ));
 
     useEffect(() => {
         if (!startAnimation) return;
 
-        const h1 = document.querySelector('#hero .inner h1');
-        if (!h1) return;
+        const chars = titleRef.current?.querySelectorAll('.char');
+        if (!chars) return;
 
-        const text = h1.textContent || '';
-        h1.innerHTML = '';
-        const fragment = document.createDocumentFragment();
+        gsap.set(chars, { opacity: 0, y: 50 });
 
-        text.split('').forEach((ch) => {
-            const span = document.createElement('span');
-            span.textContent = ch === ' ' ? '\u00A0' : ch;
-            span.style.display = 'inline-block';
-            span.style.opacity = '0';
-            span.style.transform = 'translateY(50px)';
-            fragment.appendChild(span);
-        });
-
-        h1.appendChild(fragment);
-        gsap.set(h1, { opacity: 1 });
-        const spans = h1.querySelectorAll('span');
-        gsap.to(spans, {
-            y: 0,
+        gsap.to(chars, {
             opacity: 1,
+            y: 0,
             stagger: 0.05,
             duration: 1,
             ease: 'power3.out',
@@ -48,7 +38,7 @@ const Hero = ({ startAnimation }) => {
             <div className="bg bg3"></div>
             <div className="inner">
                 <p className="whoami">{'<Who am I ?>'}</p>
-                <h1>Frontend Developer</h1>
+                <h1 ref={titleRef}>{splitText(TITLE)}</h1>
                 <p>{'</based on structured web publishing'}</p>
                 <p>{'who codes with clarity and design sense>'}</p>
             </div>

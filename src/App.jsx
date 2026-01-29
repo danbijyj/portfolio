@@ -24,7 +24,7 @@ const App = () => {
         gsap.fromTo(
             'nav',
             { top: '-70px' },
-            { top: 0, duration: 0.6, ease: 'power3.out' }
+            { top: 0, duration: 0.6, ease: 'power3.out' },
         );
         ScrollTrigger.refresh();
     };

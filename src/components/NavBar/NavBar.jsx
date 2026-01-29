@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import './NavBar.scss';
@@ -8,33 +8,23 @@ gsap.registerPlugin(ScrollToPlugin);
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const smoothScrollTo = (target) => {
-            gsap.to(window, {
-                duration: 0.5,
-                scrollTo: target,
-                ease: 'none',
-            });
-        };
+    const handleScrollTo = useCallback((targetId) => {
+        const target = document.querySelector(targetId);
+        if (!target) return;
 
-        const links = document.querySelectorAll('nav a');
+        gsap.to(window, {
+            duration: 0.6,
+            scrollTo: target,
+            ease: 'none',
+        });
 
-        const handleClick = (e) => {
-            e.preventDefault();
-            const href = e.currentTarget.getAttribute('href');
-            const target = document.querySelector(href);
-            if (target) smoothScrollTo(target);
-            setMenuOpen(false);
-        };
-
-        links.forEach((link) => link.addEventListener('click', handleClick));
-
-        return () => {
-            links.forEach((link) =>
-                link.removeEventListener('click', handleClick),
-            );
-        };
+        setMenuOpen(false);
     }, []);
+
+    const handleLinkClick = (e, targetId) => {
+        e.preventDefault();
+        handleScrollTo(targetId);
+    };
 
     return (
         <nav className="nav">
@@ -42,32 +32,58 @@ const NavBar = () => {
             <div className="inner">
                 <div className="logo_line"></div>
                 <div className="logo">
-                    <a href="#hero">
+                    <a
+                        href="#hero"
+                        onClick={(e) => handleLinkClick(e, '#hero')}
+                    >
                         <p>Portfolio by</p>
                         <h1>{'{ JANG YOO JUNG }'}</h1>
                     </a>
                 </div>
-                <div
+                <button
                     className={`hamburger ${menuOpen ? 'active' : ''}`}
-                    onClick={() => setMenuOpen(!menuOpen)}
+                    onClick={() => setMenuOpen((prev) => !prev)}
+                    aria-label="Toggle menu"
+                    aria-expanded={menuOpen}
+                    type="button"
                 >
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
                 <div className={`menu ${menuOpen ? 'open' : ''}`}>
                     <ul>
                         <li>
-                            <a href="#aboutme">About me</a>
+                            <a
+                                href="#aboutme"
+                                onClick={(e) => handleLinkClick(e, '#aboutme')}
+                            >
+                                About me
+                            </a>
                         </li>
                         <li>
-                            <a href="#skills">Skills</a>
+                            <a
+                                href="#skills"
+                                onClick={(e) => handleLinkClick(e, '#skills')}
+                            >
+                                Skills
+                            </a>
                         </li>
                         <li>
-                            <a href="#works">Works</a>
+                            <a
+                                href="#works"
+                                onClick={(e) => handleLinkClick(e, '#works')}
+                            >
+                                Works
+                            </a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a
+                                href="#contact"
+                                onClick={(e) => handleLinkClick(e, '#contact')}
+                            >
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </div>
