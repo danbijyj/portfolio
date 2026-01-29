@@ -42,6 +42,7 @@ export const skillsData = [
                     { name: 'ChatGPT', icon: '/images/icon_19.png' },
                     { name: 'Claude', icon: '/images/icon_20.png' },
                     { name: 'Gemini', icon: '/images/icon_25.png' },
+                    { name: 'etc.', icon: '/images/icon_23.png' },
                 ],
             },
             {
@@ -49,7 +50,6 @@ export const skillsData = [
                 items: [
                     { name: 'Vercel', icon: '/images/icon_21.png' },
                     { name: 'Vite', icon: '/images/icon_22.png' },
-                    { name: 'etc.', icon: '/images/icon_23.png' },
                 ],
             },
         ],
