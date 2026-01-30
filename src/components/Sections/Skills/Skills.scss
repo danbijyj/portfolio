@@ -6,8 +6,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    height: 100vh;
     .circle {
         position: absolute;
         top: 0;
@@ -191,6 +189,8 @@
 
 @media (max-width: $breakpoint-tablet) {
     .skills {
+        min-height: 100vh;
+        height: 100vh;
         .inner {
             .skill_wrap {
                 .contents {
