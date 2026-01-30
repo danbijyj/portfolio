@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+
     const sectionRef = useRef(null);
     const circleRef = useRef(null);
     const progressRef = useRef(null);
@@ -25,6 +26,9 @@ const Skills = () => {
 
     useEffect(() => {
         if (!sectionRef.current) return;
+        const w = window.innerWidth;
+
+        const circleSize = w <= 480 ? 1200 : w <= 768 ? 2000 : 4000;
 
         const ctx = gsap.context(() => {
             gsap.timeline({
@@ -38,8 +42,8 @@ const Skills = () => {
                 circleRef.current,
                 { width: 0, height: 0, opacity: 0, top: '5%' },
                 {
-                    width: '4000px',
-                    height: '4000px',
+                    width: circleSize,
+                    height: circleSize,
                     opacity: 1,
                     top: '12%',
                     duration: 3,
@@ -88,6 +92,7 @@ const Skills = () => {
     const handleListClick = (index) => {
         setActiveIndex(index);
         showBox(index);
+
         gsap.to(progressRef.current, {
             scaleY: index / (skillsData.length - 1),
             transformOrigin: 'top',
@@ -96,11 +101,13 @@ const Skills = () => {
     };
 
     return (
-        <section id="skills" className="skills" ref={sectionRef}>
+        <section ref={sectionRef} id="skills" className="skills">
             <span className="circle" ref={circleRef} />
+
             <div className="inner">
                 <div className="skill_wrap">
                     <h2>Skills</h2>
+
                     <div className="contents sticky">
                         <div className="col">
                             <div className="box_wrap">
@@ -113,6 +120,7 @@ const Skills = () => {
                                 ))}
                             </div>
                         </div>
+
                         <div className="col">
                             <div className="list_wrap">
                                 {['Design', 'Frontend', 'Others'].map(
@@ -132,12 +140,14 @@ const Skills = () => {
                                 )}
                             </div>
                         </div>
+
                         <div className="progress-bar">
-                            <div className="progress" ref={progressRef}></div>
+                            <div className="progress" ref={progressRef} />
                         </div>
                     </div>
                 </div>
             </div>
+
             <div className="skills_line">
                 <div>
                     <span>
