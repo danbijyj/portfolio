@@ -22,6 +22,8 @@ const itemPositions = [
 
 const WorksView = () => {
     const galleryRef = useRef(null);
+    const itemRefs = useRef([]);
+
     const scrollToWorks = () => {
         gsap.to(window, {
             duration: 1,
@@ -33,24 +35,32 @@ const WorksView = () => {
     useEffect(() => {
         const gallery = galleryRef.current;
         if (!gallery) return;
+
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) return;
+
         const handleMouseMove = (e) => {
-            const itemEls = gallery.querySelectorAll('.item');
-            itemEls.forEach((el, index) => {
+            itemRefs.current.forEach((el, index) => {
+                if (!el) return;
+
                 const speed = items[index]?.parallaxSpeed ?? 0.02;
                 const deltaX = (e.clientX - window.innerWidth / 2) * speed;
                 const deltaY = (e.clientY - window.innerHeight / 2) * speed;
+
                 gsap.to(el, {
                     x: deltaX,
                     y: deltaY,
                     duration: 0.6,
                     ease: 'power3.out',
-                    overwrite: true,
+                    overwrite: 'auto',
                 });
             });
         };
-        document.addEventListener('mousemove', handleMouseMove);
+
+        gallery.addEventListener('mousemove', handleMouseMove);
+
         return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
+            gallery.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
 
@@ -71,8 +81,8 @@ const WorksView = () => {
                         <div
                             key={index}
                             className="item"
+                            ref={(el) => (itemRefs.current[index] = el)}
                             style={{
-                                position: 'absolute',
                                 top: pos.top,
                                 left: pos.left,
                             }}
