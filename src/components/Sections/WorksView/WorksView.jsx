@@ -26,7 +26,7 @@ const WorksView = () => {
 
     const scrollToWorks = () => {
         gsap.to(window, {
-            duration: 1,
+            duration: 0.5,
             scrollTo: '#works',
             ease: 'power2.inOut',
         });

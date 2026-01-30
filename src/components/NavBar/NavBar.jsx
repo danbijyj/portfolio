@@ -15,7 +15,7 @@ const NavBar = ({ startAnimation }) => {
 
         gsap.to(navRef.current, {
             y: 0,
-            duration: 0.6,
+            duration: 0.5,
             ease: 'power2.out',
         });
     }, [startAnimation]);
@@ -25,7 +25,7 @@ const NavBar = ({ startAnimation }) => {
         if (!target) return;
 
         gsap.to(window, {
-            duration: 0.6,
+            duration: 0.5,
             scrollTo: target,
             ease: 'none',
         });
