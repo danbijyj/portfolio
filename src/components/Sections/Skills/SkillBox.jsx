@@ -1,5 +1,4 @@
 import { forwardRef } from 'react';
-import './Skills.scss';
 
 const SkillBox = forwardRef(({ data }, ref) => {
     if (data.type === 'basic') {

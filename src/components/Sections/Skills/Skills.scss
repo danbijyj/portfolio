@@ -36,7 +36,7 @@
                 .box_wrap {
                     position: relative;
                     width: 800px;
-                    height: 380px;
+                    min-height: 380px;
                     .box {
                         position: absolute;
                         top: 0;
@@ -47,7 +47,7 @@
                         padding: 60px 39px;
                         background: $white;
                         border: 1px solid $black;
-                        box-shadow: 3px 3px 0 #000;
+                        box-shadow: 3px 3px 0 $black;
                         .box_title {
                             @include font-style(
                                 $size: $fz-14,
@@ -146,7 +146,7 @@
                         top: 0;
                         left: 0;
                         @include full-size;
-                        background-color: #000;
+                        background-color: $black;
                         transform-origin: top;
                         transform: scaleY(0);
                         will-change: transform;
@@ -256,7 +256,7 @@
         }
         .inner {
             .skill_wrap {
-                margin-top: 120px;
+                margin-top: 140px;
                 .contents {
                     margin-top: 16px;
                     gap: 16px;
