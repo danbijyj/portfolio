@@ -138,8 +138,10 @@
                             }
                         }
                         &:hover {
-                            .img_wrap img {
-                                transform: scale(1.1);
+                            .img_wrap {
+                                img {
+                                    transform: scale(1.1);
+                                }
                             }
                             button {
                                 background-color: $blue;

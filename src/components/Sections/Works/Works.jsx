@@ -207,9 +207,7 @@ const WorkItem = ({ item, onClick }) => {
                 <div className="img_wrap">
                     <img src={item.img} alt={item.title} />
                 </div>
-
                 <p className="ctgr">{item.ctgr}</p>
-
                 <div className="title_wrap">
                     <p>{item.title}</p>
                     <div>
@@ -217,7 +215,6 @@ const WorkItem = ({ item, onClick }) => {
                         <span>{item.skill2}</span>
                     </div>
                 </div>
-
                 <div className="line"></div>
                 <button>more</button>
             </div>
