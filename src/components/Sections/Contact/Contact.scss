@@ -84,8 +84,6 @@
 }
 @media (max-width: $breakpoint-tablet) {
     .contact {
-        width: $breakpoint-tablet;
-        max-width: 100vw;
         .contact_marquee {
             font-size: 22px;
             .marquee_part {
@@ -125,8 +123,6 @@
 }
 @media (max-width: $breakpoint-mobile) {
     .contact {
-        width: $breakpoint-mobile;
-        max-width: 100vw;
         .inner {
             h2 {
                 margin-top: 80px;

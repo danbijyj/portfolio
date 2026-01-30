@@ -2,17 +2,15 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './Contact.scss';
 
+const MARQUEE_TEXT = '<frontend="developer" jangyoojung="portfolio" /> ';
+
 const Contact = () => {
     const marqueeRef = useRef(null);
 
     useEffect(() => {
         const marqueeInner = marqueeRef.current.querySelector('.marquee_inner');
-        const marqueeParts = marqueeInner.querySelectorAll('.marquee_part');
 
-        marqueeParts.forEach((part) => {
-            const clone = part.cloneNode(true);
-            marqueeInner.appendChild(clone);
-        });
+        if (!marqueeInner) return;
 
         const tween = gsap.to(marqueeInner, {
             x: '-50%',
@@ -22,18 +20,12 @@ const Contact = () => {
         });
 
         let currentScroll = 0;
-        let isScrollingDown = true;
 
         const handleScroll = () => {
             const scrollTop =
                 window.pageYOffset || document.documentElement.scrollTop;
-            isScrollingDown = scrollTop > currentScroll;
-
-            gsap.to(tween, {
-                timeScale: isScrollingDown ? 1 : -1,
-                overwrite: true,
-            });
-
+            const isDown = scrollTop > currentScroll;
+            tween.timeScale(isDown ? 1 : -1);
             currentScroll = scrollTop;
         };
 
@@ -49,11 +41,9 @@ const Contact = () => {
         <section id="contact" className="contact">
             <div className="contact_marquee" ref={marqueeRef}>
                 <div className="marquee_inner">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(10)].map((_, i) => (
                         <div className="marquee_part" key={i}>
-                            {
-                                '<frontend="developer" jangyoojung="portfolio" /> '
-                            }
+                            {MARQUEE_TEXT}
                         </div>
                     ))}
                 </div>
