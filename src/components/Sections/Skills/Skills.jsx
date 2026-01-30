@@ -28,7 +28,7 @@ const Skills = () => {
         if (!sectionRef.current) return;
         const w = window.innerWidth;
 
-        const circleSize = w <= 480 ? 1200 : w <= 768 ? 2000 : 4000;
+        const circleSize = w <= 480 ? 1000 : w <= 768 ? 2000 : 4000;
 
         const ctx = gsap.context(() => {
             gsap.timeline({
