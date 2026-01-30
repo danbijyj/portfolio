@@ -6,34 +6,39 @@ import './AboutMe.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
-    const riseRef = useRef(null);
+    const sectionRef = useRef(null);
+    const picRef = useRef(null);
 
     useEffect(() => {
-        const el = riseRef.current;
-        if (!el) return;
-        gsap.fromTo(
-            el,
-            { y: 90, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 2,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: '#aboutme',
-                    start: 'top 30%',
-                    toggleActions: 'restart none none reverse',
+        if (!sectionRef.current || !picRef.current) return;
+
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                picRef.current,
+                { y: 90, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.6,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 30%',
+                        toggleActions: 'play none none reverse',
+                    },
                 },
-            },
-        );
+            );
+        }, sectionRef);
+
+        return () => ctx.revert();
     }, []);
 
     return (
-        <section id="aboutme" className="aboutme">
+        <section id="aboutme" className="aboutme" ref={sectionRef}>
             <div className="inner">
                 <h2>Ab*ut me</h2>
                 <div className="con">
-                    <div className="pic" ref={riseRef}>
+                    <div className="pic" ref={picRef}>
                         <img src="/images/me.jpg" alt="about me" />
                         <span>*</span>
                     </div>
