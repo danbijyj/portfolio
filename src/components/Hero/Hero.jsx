@@ -37,10 +37,10 @@ const Hero = ({ startAnimation }) => {
             <div className="bg bg2"></div>
             <div className="bg bg3"></div>
             <div className="inner">
-                <p className="whoami">{'<Who am I ?>'}</p>
+                <p className="whoami">{'<Who am I? />'}</p>
                 <h1 ref={titleRef}>{splitText(TITLE)}</h1>
-                <p>{'</based on structured web publishing'}</p>
-                <p>{'who codes with clarity and design sense>'}</p>
+                <p>{'<based on structured web publishing'}</p>
+                <p>{'who codes with clarity and design sense />'}</p>
             </div>
         </section>
     );
