@@ -150,7 +150,7 @@
                 font-size: inherit;
                 line-height: 1;
                 &:hover {
-                    background-color: lighten($blue, 5%);
+                    background-color: rgba($blue, 0.8);
                     transform: translateY(-2px);
                 }
             }
