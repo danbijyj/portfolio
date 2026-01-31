@@ -55,7 +55,11 @@ const Contact = () => {
                 <ul>
                     <li>
                         <img src="./images/con_git.png" alt="깃허브주소" />
-                        <a href="https://github.com/danbijyj" target="_blank">
+                        <a
+                            href="https://github.com/danbijyj"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             github.com/danbijyj
                         </a>
                     </li>
