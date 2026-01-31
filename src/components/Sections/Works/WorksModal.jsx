@@ -1,9 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { worksData } from '../../../assets/data/worksData';
 import './WorksModal.scss';
 
 const WorksModal = ({ itemId, onClose }) => {
-    const item = worksData.find((data) => data.id === itemId);
+    const item = useMemo(
+        () => worksData.find((data) => data.id === itemId),
+        [itemId],
+    );
 
     useEffect(() => {
         if (!item) return;
