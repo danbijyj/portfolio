@@ -87,7 +87,7 @@ const WorksView = () => {
                                 left: pos.left,
                             }}
                         >
-                            <img src={itemData.img} alt="" />
+                            <img src={itemData.img} alt="" aria-hidden="true" />
                         </div>
                     );
                 })}
