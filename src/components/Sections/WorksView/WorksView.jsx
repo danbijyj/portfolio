@@ -6,6 +6,8 @@ import './WorksView.scss';
 
 gsap.registerPlugin(ScrollToPlugin);
 
+const DEFAULT_POSITION = { top: '50%', left: '50%' };
+
 const itemPositions = [
     { top: '-5%', left: '5%' },
     { top: '40%', left: '-2%' },
@@ -36,20 +38,20 @@ const WorksView = () => {
         const gallery = galleryRef.current;
         if (!gallery) return;
 
-        const isMobile = window.innerWidth <= 768;
-        if (isMobile) return;
+        if (window.innerWidth <= 768) return;
 
         const handleMouseMove = (e) => {
-            itemRefs.current.forEach((el, index) => {
-                if (!el) return;
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
 
-                const speed = items[index]?.parallaxSpeed ?? 0.02;
-                const deltaX = (e.clientX - window.innerWidth / 2) * speed;
-                const deltaY = (e.clientY - window.innerHeight / 2) * speed;
+            itemRefs.current.forEach((el, index) => {
+                if (!el || !items[index]) return;
+
+                const speed = items[index].parallaxSpeed ?? 0.02;
 
                 gsap.to(el, {
-                    x: deltaX,
-                    y: deltaY,
+                    x: (e.clientX - centerX) * speed,
+                    y: (e.clientY - centerY) * speed,
                     duration: 0.6,
                     ease: 'power3.out',
                     overwrite: 'auto',
@@ -76,7 +78,7 @@ const WorksView = () => {
             </div>
             <div className="gallery" ref={galleryRef}>
                 {items.map((itemData, index) => {
-                    const pos = itemPositions[index];
+                    const pos = itemPositions[index] ?? DEFAULT_POSITION;
                     return (
                         <div
                             key={index}
