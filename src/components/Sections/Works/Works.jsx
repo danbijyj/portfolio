@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { ScrollToPlugin } from 'gsap/all';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { worksData } from '../../../assets/data/worksData';
 import WorksModal from './WorksModal';
 import './Works.scss';
