@@ -112,6 +112,7 @@
                 .list_wrap {
                     text-align: right;
                     .list {
+                        display: block;
                         @include font-style(
                             $size: $fz-36,
                             $weight: $fw-300,
@@ -122,15 +123,14 @@
                         transition:
                             color 0.3s ease,
                             border 0.3s ease;
-                    }
-                    .active {
-                        @include font-style(
-                            $size: $fz-36,
-                            $weight: $fw-500,
-                            $color: $black
-                        );
-                        border-bottom: 1px solid $green;
-                        display: inline-block;
+                        &.active {
+                            @include font-style(
+                                $size: $fz-36,
+                                $weight: $fw-500,
+                                $color: $black
+                            );
+                            border-bottom: 1px solid $green;
+                        }
                     }
                 }
                 .progress-bar {

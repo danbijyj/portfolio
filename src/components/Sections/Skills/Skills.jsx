@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { skillsData } from '../../../assets/data/skillsData';
@@ -15,39 +15,59 @@ const Skills = () => {
     const progressRef = useRef(null);
     const boxRefs = useRef([]);
 
+    const TOTAL = skillsData.length;
+
+    const getCircleSize = () => {
+        const w = window.innerWidth;
+        if (w <= 480) return 1000;
+        if (w <= 768) return 2000;
+        return 4000;
+    };
+
     const showBox = (index) => {
         boxRefs.current.forEach((box, i) => {
             gsap.set(box, {
                 opacity: i === index ? 1 : 0,
                 zIndex: i === index ? 2 : 1,
+                duration: 0.3,
+                ease: 'power2.out',
             });
         });
     };
 
+    const allSkillNames = useMemo(() => {
+        return skillsData.flatMap((skill) => {
+            if (skill.items) {
+                return skill.items.map((item) => item.name);
+            }
+            if (skill.groups) {
+                return skill.groups.flatMap((group) =>
+                    group.items.map((item) => item.name),
+                );
+            }
+            return [];
+        });
+    }, []);
+
     useEffect(() => {
         if (!sectionRef.current) return;
 
-        const w = window.innerWidth;
-
-        const circleSize = w <= 480 ? 1000 : w <= 768 ? 2000 : 4000;
-
         const ctx = gsap.context(() => {
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: 'top 90%',
-                    end: 'top 20%',
-                    scrub: 1,
-                },
-            }).fromTo(
+            gsap.fromTo(
                 circleRef.current,
                 { width: 0, height: 0, opacity: 0, top: '5%' },
                 {
-                    width: circleSize,
-                    height: circleSize,
+                    width: getCircleSize(),
+                    height: getCircleSize(),
                     opacity: 1,
                     top: '12%',
                     duration: 3,
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 90%',
+                        end: 'top 20%',
+                        scrub: 1,
+                    },
                 },
             );
 
@@ -65,12 +85,12 @@ const Skills = () => {
             ScrollTrigger.create({
                 trigger: sectionRef.current,
                 start: 'top top',
-                end: '+=600',
+                end: `+=${TOTAL * 200}`,
                 scrub: 0.5,
                 pin: true,
                 onUpdate: (self) => {
                     const p = self.progress;
-                    const index = p < 1 / 3 ? 0 : p < 2 / 3 ? 1 : 2;
+                    const index = Math.min(TOTAL - 1, Math.floor(p * TOTAL));
 
                     gsap.to(progressRef.current, {
                         scaleY: p,
@@ -96,9 +116,10 @@ const Skills = () => {
         showBox(index);
 
         gsap.to(progressRef.current, {
-            scaleY: index / (skillsData.length - 1),
+            scaleY: index / (TOTAL - 1),
             transformOrigin: 'top',
             duration: 0.4,
+            ease: 'power2.out',
         });
     };
 
@@ -115,7 +136,7 @@ const Skills = () => {
                             <div className="box_wrap">
                                 {skillsData.map((skill, i) => (
                                     <SkillBox
-                                        key={i}
+                                        key={skill.category}
                                         data={skill}
                                         ref={(el) => (boxRefs.current[i] = el)}
                                     />
@@ -125,21 +146,17 @@ const Skills = () => {
 
                         <div className="col">
                             <div className="list_wrap">
-                                {['Design', 'Frontend', 'Others'].map(
-                                    (label, i) => (
-                                        <div
-                                            key={label}
-                                            className={`list ${
-                                                activeIndex === i
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
-                                            onClick={() => handleListClick(i)}
-                                        >
-                                            {label}
-                                        </div>
-                                    ),
-                                )}
+                                {skillsData.map((skill, i) => (
+                                    <button
+                                        key={skill.category}
+                                        className={`list ${
+                                            activeIndex === i ? 'active' : ''
+                                        }`}
+                                        onClick={() => handleListClick(i)}
+                                    >
+                                        {skill.category}
+                                    </button>
+                                ))}
                             </div>
                         </div>
 
@@ -152,18 +169,9 @@ const Skills = () => {
 
             <div className="skills_line">
                 <div>
-                    <span>
-                        Figma Photoshop HTML CSS SCSS Styled-components
-                        Tailwind-CSS Javascript React React-Router Redux-Toolkit
-                        Zustand GSAP RESTAPI Github Notion ChatGPT Claude Gemini
-                        Vercel Vite Etc.&nbsp;
-                    </span>
-                    <span>
-                        Figma Photoshop HTML CSS SCSS Styled-components
-                        Tailwind-CSS Javascript React React-Router Redux-Toolkit
-                        Zustand GSAP RESTAPI Github Notion ChatGPT Claude Gemini
-                        Vercel Vite Etc.&nbsp;
-                    </span>
+                    {[0, 1].map((i) => (
+                        <span key={i}>{allSkillNames.join(' ')}&nbsp;</span>
+                    ))}
                 </div>
             </div>
         </section>
