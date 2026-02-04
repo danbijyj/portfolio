@@ -29,8 +29,6 @@ const Skills = () => {
             gsap.set(box, {
                 opacity: i === index ? 1 : 0,
                 zIndex: i === index ? 2 : 1,
-                duration: 0.3,
-                ease: 'power2.out',
             });
         });
     };
