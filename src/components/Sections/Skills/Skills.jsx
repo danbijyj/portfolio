@@ -26,6 +26,7 @@ const Skills = () => {
 
     useEffect(() => {
         if (!sectionRef.current) return;
+
         const w = window.innerWidth;
 
         const circleSize = w <= 480 ? 1000 : w <= 768 ? 2000 : 4000;
@@ -56,6 +57,7 @@ const Skills = () => {
                 top: 0,
                 left: 0,
             });
+
             showBox(0);
 
             let prevIndex = 0;
@@ -108,7 +110,7 @@ const Skills = () => {
                 <div className="skill_wrap">
                     <h2>Skills</h2>
 
-                    <div className="contents sticky">
+                    <div className="contents">
                         <div className="col">
                             <div className="box_wrap">
                                 {skillsData.map((skill, i) => (
