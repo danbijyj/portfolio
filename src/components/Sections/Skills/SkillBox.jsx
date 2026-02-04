@@ -22,7 +22,7 @@ const SkillBox = forwardRef(({ data }, ref) => {
             <div className="box others_box" ref={ref}>
                 {data.groups.map((group, i) => (
                     <div className="group" key={i}>
-                        <h4 className="group_title">{group.title}</h4>
+                        <h3 className="group_title">{group.title}</h3>
                         <div className="divider"></div>
                         <div className="icon_grid">
                             {group.items.map((item, j) => (
