@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 const SkillBox = forwardRef(({ data }, ref) => {
     if (data.type === 'basic') {
         return (
-            <div className="box" ref={ref}>
+            <article className="box" ref={ref}>
                 <h3 className="box_title">{data.category}</h3>
                 <div className="divider"></div>
                 <div className="icon_grid">
@@ -14,12 +14,12 @@ const SkillBox = forwardRef(({ data }, ref) => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </article>
         );
     }
     if (data.type === 'grouped') {
         return (
-            <div className="box others_box" ref={ref}>
+            <article className="box others_box" ref={ref}>
                 {data.groups.map((group, i) => (
                     <div className="group" key={i}>
                         <h3 className="group_title">{group.title}</h3>
@@ -34,7 +34,7 @@ const SkillBox = forwardRef(({ data }, ref) => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </article>
         );
     }
     return null;
