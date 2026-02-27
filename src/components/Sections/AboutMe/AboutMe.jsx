@@ -48,13 +48,18 @@ const AboutMe = () => {
                                 장유정<span>JANG YOO JUNG</span>
                             </h3>
                             <p>
-                                안녕하세요. 감각과 논리를 모두 갖춘 개발자를
-                                꿈꾸는 장유정입니다.
+                                디자인 경험을 기반으로 사용자 인터페이스 구현에
+                                강점을 가진 UI Developer 장유정입니다.
                             </p>
                             <p>
-                                깔끔한 코드와 자연스러운 디자인, 사용자 중심의
-                                사고를 중요하게 생각하며, 보기에도 좋고
-                                사용하기에도 편한 웹을 만드는 것을 추구합니다.
+                                React 환경에서 컴포넌트 기반 UI 개발과 API
+                                데이터 연동을 경험했으며, Web Publishing 역량을
+                                바탕으로 안정적인 화면 구현이 가능합니다.
+                            </p>
+                            <p>
+                                디자인과 개발 사이의 커뮤니케이션을 이해하며
+                                실무에 바로 기여할 수 있는 UI 개발자를 목표로
+                                합니다.
                             </p>
                         </div>
                         <div className="spec">
@@ -70,13 +75,13 @@ const AboutMe = () => {
                                 </p>
                                 <ul>
                                     <li>
-                                        <span>* </span>UX/UI Designer
-                                    </li>
-                                    <li>
-                                        <span>* </span>Web Publisher
+                                        <span>* </span>UI Developer
                                     </li>
                                     <li>
                                         <span>* </span>Frontend Developer
+                                    </li>
+                                    <li>
+                                        <span>* </span>Web Publisher
                                     </li>
                                 </ul>
                             </div>

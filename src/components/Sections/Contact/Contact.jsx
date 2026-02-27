@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './Contact.scss';
 
-const MARQUEE_TEXT = '<frontend="developer" jangyoojung="portfolio" /> ';
+const MARQUEE_TEXT = '<UI="developer" jangyoojung="portfolio" /> ';
 
 const Contact = () => {
     const marqueeRef = useRef(null);

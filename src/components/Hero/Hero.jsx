@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './Hero.scss';
 
-const TITLE = 'Frontend Developer';
+const TITLE = 'UI Developer';
 
 const Hero = ({ startAnimation }) => {
     const titleRef = useRef(null);
@@ -39,8 +39,8 @@ const Hero = ({ startAnimation }) => {
             <div className="inner">
                 <p className="whoami">{'<Who am I? />'}</p>
                 <h1 ref={titleRef}>{splitText(TITLE)}</h1>
-                <p>{'<based on structured web publishing'}</p>
-                <p>{'who codes with clarity and design sense />'}</p>
+                <p>{'<React 기반 웹 인터페이스 개발과'}</p>
+                <p>{'Web Publishing 역량을 갖춘 UI Developer />'}</p>
             </div>
         </section>
     );
