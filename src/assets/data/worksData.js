@@ -2,6 +2,39 @@ export const worksData = [
     {
         id: 1,
         ctgr: 'Personal Project',
+        title: '서울시 문화행사',
+        subtitle: 'Personal Project',
+        tag: ['personal'],
+        img: '/images/works_14.png',
+        skill1: 'Design',
+        skill2: 'React',
+        type: 'personal',
+        desc: '서울 열린데이터 광장의 문화행사 REST API를 활용해 공연·전시·축제 정보를 탐색할 수 있는 웹 애플리케이션을 구현했습니다. TanStack Query를 사용해 데이터를 효율적으로 가져오고 캐싱했으며, 구/분류/요금 조건 필터와 키워드 검색, 정렬 기능을 결합해 다양한 방식으로 문화행사를 탐색할 수 있도록 설계했습니다. 검색어 입력 시 debounce를 적용해 불필요한 요청을 줄였고, Zustand 기반 즐겨찾기 상태 관리와 모달 상세보기, 카카오 지도 연동을 통해 실제 서비스에 가까운 사용자 경험을 구현했습니다.',
+        details: {
+            structure:
+                '히어로, 검색창, 조건 필터, 카드 그리드, 페이지네이션, 상세 모달로 구성된 원페이지',
+            ratio: '디자인 100%, 코딩 100%',
+        },
+        tags: [
+            'Figma',
+            'React',
+            'JavaScript',
+            'TanStack Query',
+            'Zustand',
+            'Public REST API',
+            'Tailwind CSS',
+            'Kakao Map API',
+            'Vercel',
+        ],
+        links: {
+            github: 'https://github.com/danbijyj/seoul-culture',
+            site: 'https://seoul-culture-three.vercel.app/',
+        },
+        responsive: false,
+    },
+    {
+        id: 2,
+        ctgr: 'Personal Project',
         title: '인천광역시 영업중 약국',
         subtitle: 'Personal Project',
         tag: ['personal'],
@@ -30,7 +63,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 2,
+        id: 3,
         ctgr: 'Personal Project',
         title: '경기도 공공 도서관 찾기',
         subtitle: 'Personal Project',
@@ -59,7 +92,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 3,
+        id: 4,
         ctgr: 'Personal Project',
         title: '에스더버니 미니샵',
         subtitle: 'Personal Project',
@@ -93,7 +126,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 4,
+        id: 5,
         ctgr: 'Personal Project',
         title: '개인 포트폴리오',
         subtitle: 'Personal Project',
@@ -116,7 +149,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 5,
+        id: 6,
         ctgr: 'Personal Project',
         title: '아웃백스테이크하우스',
         subtitle: 'Personal Project',
@@ -150,7 +183,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 6,
+        id: 7,
         ctgr: 'Personal Project',
         title: '헤라',
         subtitle: 'Personal Project',
@@ -181,7 +214,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 7,
+        id: 8,
         ctgr: 'Team Project',
         title: 'SoundsGoods',
         subtitle: 'Team Project',
@@ -218,7 +251,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 8,
+        id: 9,
         ctgr: 'Team Project',
         title: '현대식품관 투홈',
         subtitle: 'Team Project',
@@ -257,7 +290,7 @@ export const worksData = [
         responsive: true,
     },
     {
-        id: 9,
+        id: 10,
         ctgr: 'Personal Project',
         title: '서울시청',
         subtitle: 'Personal Project',
@@ -287,7 +320,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 10,
+        id: 11,
         ctgr: 'Personal Project',
         title: '웰컴복지재단',
         subtitle: 'Personal Project',
@@ -309,7 +342,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 11,
+        id: 12,
         ctgr: 'Personal Project',
         title: '경동(클론코딩)',
         subtitle: 'Personal Project',
@@ -331,7 +364,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 12,
+        id: 13,
         ctgr: 'Team Project',
         title: 'SRT',
         subtitle: 'Team Project',
@@ -356,7 +389,7 @@ export const worksData = [
         responsive: false,
     },
     {
-        id: 13,
+        id: 14,
         ctgr: 'Personal Project',
         title: 'Express-Redux',
         subtitle: 'Personal Project',
