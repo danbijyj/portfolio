@@ -9,7 +9,7 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: '서울 열린데이터 광장의 문화행사 REST API를 활용해 공연·전시·축제 정보를 탐색할 수 있는 웹 애플리케이션을 구현했습니다. TanStack Query를 사용해 데이터를 효율적으로 가져오고 캐싱했으며, 구/분류/요금 조건 필터와 키워드 검색, 정렬 기능을 결합해 다양한 방식으로 문화행사를 탐색할 수 있도록 설계했습니다. 검색어 입력 시 debounce를 적용해 불필요한 요청을 줄였고, Zustand 기반 즐겨찾기 상태 관리와 모달 상세보기, 카카오 지도 연동을 통해 실제 서비스에 가까운 사용자 경험을 구현했습니다.',
+        desc: '서울 열린데이터 광장의 문화행사 REST API를 활용해 공연·전시·축제 정보를 탐색할 수 있는 웹 애플리케이션을 구현했습니다. TanStack Query를 사용해 데이터를 효율적으로 가져오고 캐싱했으며, 구/분류/요금 조건 필터와 키워드 검색, 정렬 기능을 결합해 다양한 방식으로 문화행사를 탐색할 수 있도록 설계했습니다. 검색어 입력 시 debounce를 적용해 불필요한 요청을 줄였고, 검색 결과에서 입력한 키워드를 하이라이트해 가독성을 높였습니다. 또한 Zustand 기반 즐겨찾기 상태 관리와 모달 상세보기, 카카오 지도 연동을 통해 실제 서비스에 가까운 사용자 경험을 구현했습니다.',
         details: {
             structure:
                 '히어로, 검색창, 조건 필터, 카드 그리드, 페이지네이션, 상세 모달로 구성된 원페이지',
@@ -30,7 +30,7 @@ export const worksData = [
             github: 'https://github.com/danbijyj/seoul-culture',
             site: 'https://seoul-culture-three.vercel.app/',
         },
-        responsive: false,
+        responsive: true,
     },
     {
         id: 2,
