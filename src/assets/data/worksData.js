@@ -102,7 +102,7 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: 'React와 Redux Toolkit을 기반으로 이커머스 핵심 기능을 구현한 미니 프로젝트입니다. 상품 목록, 장바구니, 인증, 게시판, 리뷰, 페이지네이션 등 실제 서비스 흐름을 기준으로 기능을 구성했으며, 전역 상태는 도메인 단위로 분리해 장바구니 계산 로직, 인증 상태, 페이지 상태를 명확히 관리했습니다. 카카오 로그인과 로컬 인증을 함께 적용해 인증 흐름을 구성했으며, localStorage 연동을 통해 상태 유지 UX를 고려했습니다. 기획, 디자인, 설계 및 구현 전 과정을 단독으로 수행한 프로젝트로, 비동기 데이터 처리와 컴포넌트 설계를 경험했습니다.',
+        desc: 'React와 Redux Toolkit을 기반으로 이커머스 서비스의 핵심 흐름을 구현한 프로젝트입니다. 상품 목록, 장바구니, 인증, 게시판, 리뷰 등 실제 서비스 구조를 기준으로 기능을 구성했으며, 전역 상태는 도메인 단위로 분리해 장바구니 계산 로직, 인증 상태, 페이지 상태를 체계적으로 관리했습니다. Axios를 활용한 비동기 데이터 처리와 localStorage 연동을 통해 상태 유지 UX를 구현했고, 카카오 로그인과 자체 인증을 결합해 인증 흐름을 설계했습니다. 서비스 흐름 중심의 상태 관리와 컴포넌트 구조 설계를 경험한 프로젝트입니다.',
         details: {
             structure:
                 '메인, 소개, 뉴스, 상품, 게시판, 로그인, 회원가입, 장바구니',
@@ -115,8 +115,8 @@ export const worksData = [
             'JavaScript',
             'Redux Toolkit',
             'Axios',
+            'Kakao Login',
             'Styled-Components',
-            'React Masonry CSS',
             'Swiper',
             'Vercel',
         ],
