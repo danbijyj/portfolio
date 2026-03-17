@@ -35,14 +35,14 @@ export const worksData = [
     {
         id: 2,
         ctgr: 'Personal Project',
-        title: '인천광역시 영업중 약국',
+        title: '인천시 영업중 약국',
         subtitle: 'Personal Project',
         tag: ['personal'],
         img: '/images/works_13.png',
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: '공공데이터 REST API를 활용해 인천광역시 구/군별 약국 정보를 조회하는 웹 애플리케이션을 구현했습니다. 영업 시간 데이터를 영업중, 곧 영업종료, 영업종료 상태로 실시간 계산하고 UI에 반영했으며, 상태 필터와 더보기 페이지네이션을 통해 대용량 데이터를 효율적으로 탐색할 수 있도록 설계했습니다. 지도 검색은 주소와 약국명을 결합해 검색 정확도를 개선했으며, 영업 종료 시 전화 버튼 비활성화 등 상태 기반 UX를 적용해 실제 서비스에 가까운 사용자 경험을 구현했습니다.',
+        desc: 'Axios를 활용해 공공데이터 REST API를 호출하여 인천광역시 구/군별 약국 정보를 조회하는 웹 애플리케이션을 구현했습니다. 영업 시간 데이터를 기반으로 영업중, 곧 영업종료, 영업종료 상태를 실시간 계산해 UI에 반영했으며, 상태 필터와 더보기 페이지네이션을 통해 대용량 데이터를 효율적으로 탐색할 수 있도록 설계했습니다. 지도 검색은 주소와 약국명을 결합해 검색 정확도를 개선했으며, 영업 종료 시 전화 버튼 비활성화 등 상태 기반 UX를 적용해 실제 서비스에 가까운 사용자 경험을 구현했습니다.',
         details: {
             structure:
                 '히어로, 지역 선택, 상태 필터, 약국 리스트, 더보기 버튼으로 구성된 원페이지',
@@ -52,6 +52,7 @@ export const worksData = [
             'Figma',
             'React',
             'JavaScript',
+            'Axios',
             'Public REST API',
             'Tailwind CSS',
             'Vercel',
@@ -65,7 +66,7 @@ export const worksData = [
     {
         id: 3,
         ctgr: 'Personal Project',
-        title: '경기도 공공 도서관 찾기',
+        title: '경기도 공공 도서관',
         subtitle: 'Personal Project',
         tag: ['personal'],
         img: '/images/works_12.png',
