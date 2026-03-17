@@ -136,7 +136,7 @@ export const worksData = [
         skill1: 'Design',
         skill2: 'React',
         type: 'personal',
-        desc: 'React 기반의 원페이지 포트폴리오로 GSAP ScrollTrigger와 Timeline을 활용해 로딩 시퀀스, 스크롤 인터랙션, 텍스트 애니메이션 등을 구현했습니다. 전역 SCSS 구조를 설계해 일관된 스타일 시스템을 구축했으며 컴포넌트를 체계적으로 분리하여 자연스러운 화면 전환을 구성했습니다. 또한 마우스 패럴랙스 갤러리, 프로젝트 필터링, 모달 상세 보기 등 다양한 UX 기능을 포함해 디자인부터 반응형 개발까지 전 과정을 100% 수행한 개인 프로젝트입니다.',
+        desc: 'React를 기반으로 Loader → Nav → Hero → AboutMe → Skills → Works → Contact로 이어지는 원페이지 흐름을 설계하고, GSAP ScrollTrigger와 Timeline을 활용해 스크롤 기반 인터랙션과 애니메이션을 구현했습니다. 특히 Skills와 Works 영역에서는 단순한 연출이 아닌 콘텐츠 이해를 돕는 방향으로 인터랙션을 적용했으며, 프로젝트 필터링과 모달 상세 보기, ESC 닫기 및 배경 스크롤 차단 등 실제 서비스 수준의 UX를 반영했습니다. 컴포넌트의 책임을 명확히 분리하고, 유지보수와 확장성을 고려한 구조 설계에 중점을 둔 프로젝트입니다.',
         details: {
             structure:
                 '로딩, 히어로, 스킬, 프로젝트, 모달 등으로 구성된 원페이지',
@@ -171,8 +171,6 @@ export const worksData = [
             'JavaScript',
             'Styled-Components',
             'Axios',
-            'Custom Hooks',
-            'React Masonry CSS',
             'Pixabay REST API',
             'Swiper',
             'Vercel',
